@@ -54,21 +54,6 @@ p{
 
 /* Page Content */
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
 .item1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -105,7 +90,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(239,211,203,255);
+  background-color: white;
 }
 
 li {
@@ -119,16 +104,16 @@ li a, .dropbtn {
   padding: 14px 16px;
   text-decoration: none;
   
-  font-family: "gill sans", sans-serif;
-  color: rgb(179, 135, 130);
+  font-family: 'Archivo Black', sans-serif; font-size:30px;
+  color:black;
 }
 
 li a:hover, .dropbtn:hover {
-  color: rgb(103, 73, 70);
+  color: rgb(255, 255, 255);
 }
 
 li a:hover, .dropdown:hover .dropbtn{
-  background-color: rgb(189, 160, 160)
+  background-color: rgb(252, 252, 252)
 }
 
 li.dropdown {
@@ -159,7 +144,7 @@ li.dropdown {
 }
 
 
-/* Here I wanted to show fluency with animation frameworks*/
+/* animation */
 .hover-underline-animation {
   display: inline-block;
   position: relative; 
@@ -174,7 +159,7 @@ li.dropdown {
   bottom: 0;
   left: 0;
   /* line animation colour*/
-  background-color:  rgb(103, 73, 70);
+  background-color:  rgb(255, 254, 254);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
