@@ -25,6 +25,16 @@ body {
   height: 28vh; /* Set the height to 100% of the viewport height */
   margin: 0; /* Remove any default margin that might affect the full height */
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
 h1{
   font-family: 'Bodoni Moda', serif; font-size:50px;
 }
@@ -36,7 +46,6 @@ h2{
 h3{
   font-family: 'Bodoni Moda', serif; font-size:20px;
 }
-
 
 p{
   font-family: 'Montserrat', sans-serif;
@@ -206,15 +215,6 @@ li.dropdown {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  
-}
-/* end*/
-/* end of nav tab styles */
-
 
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
