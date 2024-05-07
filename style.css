@@ -12,18 +12,36 @@ body {
   margin: 0;
 
 }
-
 /* Header/Logo Title */
 .header {
   padding: 60px;
   text-align: right;
   background: #f8f5f5;
   color: rgb(0, 0, 0);
-  font-size: 20px;
-  border: 30px solid #000000;
-  /*  change height of frame of header  */
-  height: 28vh; /* Set the height to 100% of the viewport height */
-  margin: 0; /* Remove any default margin that might affect the full height */
+  font-size: 20px; /* Larger font size for larger screens */
+  border: 30px solid #ff0909; /* Thick border for larger screens */
+  height: 28vh;
+  margin: 0;
+}
+
+/* Adjust styles for devices with a width up to 768 pixels (tablets and smaller devices) */
+@media (max-width: 768px) {
+  .header {
+    padding: 30px; /* Reduced padding */
+    font-size: 16px; /* Smaller font size */
+    border: 15px solid #ff0909; /* Thinner border */
+    height: 20vh; /* Smaller fixed height */
+  }
+}
+
+/* Further adjustments for devices with a width up to 480 pixels (phones in portrait) */
+@media (max-width: 480px) {
+  .header {
+    padding: 20px; /* Further reduced padding */
+    font-size: 14px; /* Further reduced font size for very small devices */
+    border: 10px solid #ff0909; /* Even thinner border */
+    height: 15vh; /* Adjusted height */
+  }
 }
 
 .center {
@@ -34,18 +52,52 @@ body {
 }
 
 
-
-h1{
-  font-family: 'Bodoni Moda', serif; font-size:50px;
+/* Base styles for larger screens */
+h1 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 50px; /* Large size for desktop */
 }
 
-h2{
-  font-family: 'Archivo Black', sans-serif; font-size:60px;
+h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 60px; /* Even larger size for desktop */
 }
 
-h3{
-  font-family: 'Bodoni Moda', serif; font-size:20px;
+h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 20px; /* Standard size for desktop */
 }
+
+/* Adjust styles for devices with a width up to 768 pixels (tablets and smaller devices) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px; /* Smaller size for tablets */
+  }
+
+  h2 {
+    font-size: 40px; /* Slightly reduced size for tablets */
+  }
+
+  h3 {
+    font-size: 18px; /* Slightly smaller size for tablets */
+  }
+}
+
+/* Further adjustments for devices with a width up to 480 pixels (phones in portrait) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Much smaller size for phones */
+  }
+
+  h2 {
+    font-size: 28px; /* Adjusted size for phones */
+  }
+
+  h3 {
+    font-size: 16px; /* Smallest size for readability on phones */
+  }
+}
+
 
 p{
   font-family: 'Montserrat', sans-serif;
@@ -69,6 +121,13 @@ p.italic {
  }
 }
 
+.wrap {
+  text-wrap: wrap;
+}
+
+.nowrap {
+  text-wrap: nowrap;
+}
 
 .flex-container1 {
   display: flex;
