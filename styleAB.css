@@ -7,12 +7,17 @@ Navigation tab is also defined below, as it is universal to the whole page and t
 /*  make page scrollable */  
 .scrollable-div1 { overflow: scroll; } .scrollable-div2 { overflow: auto; }
 
-body {
- 
-  background-color: #000000;
-
-  
-}
+   body {
+            margin: 20px;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Provides a clean, readable typeface */
+        }
+        p {
+            font-size: 16px; /* Ideal for readability; adjust as needed */
+            line-height: 1.6; /* Enhances readability by spacing out lines */
+            max-width: 600px; /* Limits line length to improve readability */
+            margin: 0 auto; /* Centers the text block */
+        }
 
 /* Header/Logo Title */
 .header {
