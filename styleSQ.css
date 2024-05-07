@@ -1,0 +1,265 @@
+
+/* OVERALL BASE STYLE
+Here is where the common style elements across the webpage are defined.
+Navigation tab is also defined below, as it is universal to the whole page and this is the universal stylesheet.
+*/
+
+/*  make page scrollable */  
+.scrollable-div1 { overflow: scroll; } .scrollable-div2 { overflow: auto; }
+
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 20px; 
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: right;
+  background: #f8f5f5;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: 30px solid #000000;
+  /*  change height of frame of header  */
+  height: 28vh; /* Set the height to 100% of the viewport height */
+  margin: 0; /* Remove any default margin that might affect the full height */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+h1{
+  font-family: 'Bodoni Moda', serif; font-size:50px;
+}
+
+h2{
+  font-family: 'Archivo Black', sans-serif; font-size:60px;
+}
+
+h3{
+  font-family: 'Bodoni Moda', serif; font-size:20px;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+@media (max-width: 1000px) {
+ h1{
+  font-size: 30px;
+ }
+ h2{
+  font-size: 40px;
+ }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px; /* Margin on the sides of the screen */
+}
+
+.video-container {
+  flex: 0 0 calc(50% - 10px); /* Set each video container to occupy 50% of the screen width with margin */
+  max-width: calc(50% - 10px); /* Prevent videos from overflowing their containers and add margin */
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio for the videos */
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.article-container {
+  margin: 0 25px; /* Adjust the margin as needed */
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  width: 10%;
+  float: left;
+}
+
+img.center {
+  display: block;
+  margin: 30 px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* background of divs */
+.div-1 {
+  background: #f8f5f5;
+}
+
+.div-2 {
+background-color: #000000;
+}
+
+
+/* Page Content */
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.column2 {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.column img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+#object-position {
+    object-position: right;
+  }
+
+/*end of overall styles*/
+
+
+
+/* NAV TAB STYLE */
+/*based on example: https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar */
+body {
+  background-color:white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+  font-family: 'Archivo Black', sans-serif; font-size:30px;
+  color:black;
+}
+
+li a:hover, .dropbtn:hover {
+  color: rgb(255, 255, 255);
+}
+
+li a:hover, .dropdown:hover .dropbtn{
+  background-color: rgb(252, 252, 252)
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(103, 73, 70);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgba(136,129,136,255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* animation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative; 
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  /* line animation colour*/
+  background-color:  rgb(255, 254, 254);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  
+}
+/* end*/
+/* end of nav tab styles */
+
