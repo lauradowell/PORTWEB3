@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:opsz@6..96&family=Gentium+Plus&family=Montserrat:ital,wght@0,400;0,600;1,300&family=Playfair+Display&family=Playfair:opsz,wght@5..1200,300&display=swap" rel="stylesheet">
+    <meta charset='UTF-8'/>
+    <title>cci</title>
+    <script src="../ant.js"></script>
+    <link rel='stylesheet' href='../styleSQ.css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <nav id="primarynav"></nav>
+        <script>printHTMLprimarynav('../ant.js');</script>
+    </header>
+   
+    <!-- Images on the same row -->
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="../photos/banana.png" alt="Description of image 1" style="width: 45%; margin-right: 5%;" />
+        <img src="../photos/platano.png" alt="Description of image 2" style="width: 45%;" />
+    </div>
+
+    <!-- Paragraph of text under the images -->
+    <p style="text-align: center; margin-top: 20px;"> I’m interested in unblurring the line between the individual and society by
+        replacing passivity and doubt with a faithful affirmation of the self. I want to create
+        situations deliberately constructed for the purpose of reawakening and
+        pursuing authentic desires, experiencing the feeling of life, adventure and the
+        liberation of everyday life. I use performance to question the established
+        order and create my own moments of truth.</p>
+    <p style="text-align: center; margin-top: 20px;"> Below is the publicationn of the project along my fellow classmates
+        <a href="FAD_FA_WEB.pdf#page=15" style="font-family: 'Archivo Black', sans-serif; font-size: 16px; display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #000000; color: white; text-decoration: none; border-radius: 5px; text-align: center;">Click to go directly to the page this project is on</a>
+    </p>
+    
+    <!-- Layout for PDF and text side by side at the bottom -->
+    <div style="display: flex; justify-content: space-between; align-items: start; margin-top: 20px;">
+        <!-- PDF on the left, floated to the right -->
+        <div style="width: 100%; text-align: center;">
+            <embed src="FAD_FA_WEB.pdf" type="application/pdf" width="60%" height="500px" />
+        </div>
+       
+    </div>
+
+</body>
+</html>
