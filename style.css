@@ -4,6 +4,9 @@ Here is where the common style elements across the webpage are defined.
 Navigation tab is also defined below, as it is universal to the whole page and this is the universal stylesheet.
 */
 
+/*  make page scrollable */  
+.scrollable-div1 { overflow: scroll; } .scrollable-div2 { overflow: auto; }
+
 body {
   font-family: Arial;
   margin: 0;
@@ -32,17 +35,59 @@ body {
 
 
 
-h1{
-  font-family: 'Bodoni Moda', serif; font-size:50px;
+/* Base styles */
+h1 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 50px; /* Default size, will adjust for smaller screens */
 }
 
-h2{
-  font-family: 'Archivo Black', sans-serif; font-size:60px;
+h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 60px; /* Default size, will adjust for smaller screens */
 }
 
-h3{
-  font-family: 'Bodoni Moda', serif; font-size:20px;
+h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 20px; /* Default size, will adjust for smaller screens */
 }
+
+/* Adjust font sizes for tablets */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 40px; /* Slightly smaller to fit tablet screens */
+  }
+  h2 {
+      font-size: 50px;
+  }
+  h3 {
+      font-size: 18px;
+  }
+}
+
+/* Adjust font sizes for mobile devices */
+@media (max-width: 480px) {
+  h1 {
+      font-size: 30px; /* Much smaller to fit mobile screens */
+  }
+  h2 {
+      font-size: 35px;
+  }
+  h3 {
+      font-size: 16px;
+  }
+}
+h1 {
+  font-size: 5vw; /* Adjust value to suit design */
+}
+
+h2 {
+  font-size: 6vw;
+}
+
+h3 {
+  font-size: 2vw;
+}
+
 
 p{
   font-family: 'Montserrat', sans-serif;
@@ -212,6 +257,15 @@ li.dropdown {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  
+}
+/* end*/
+/* end of nav tab styles */
+
 
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
