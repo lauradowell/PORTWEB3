@@ -25,44 +25,16 @@ body {
   height: 28vh; /* Set the height to 100% of the viewport height */
   margin: 0; /* Remove any default margin that might affect the full height */
 }
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+h1{
+  font-family: 'Bodoni Moda', serif; font-size:50px;
 }
 
-h1, h2, h3 {
-    font-family: 'Bodoni Moda', serif; /* Specify font families for each if different */
-    word-wrap: break-word;
-    white-space: normal;
-    hyphens: auto;
-    line-height: 1.2;
-    margin-bottom: 20px;
+h2{
+  font-family: 'Archivo Black', sans-serif; font-size:60px;
 }
 
-h1 {
-    font-size: 6vw;
-}
-h2 {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 5vw;
-}
-h3 {
-    font-size: 4vw;
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 5vw;
-    }
-    h2 {
-        font-size: 4.5vw;
-    }
-    h3 {
-        font-size: 4vw;
-    }
+h3{
+  font-family: 'Bodoni Moda', serif; font-size:20px;
 }
 
 
