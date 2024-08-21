@@ -20,7 +20,7 @@ body {
   background: #f8f5f5;
   color: rgb(0, 0, 0);
   font-size: 4vw; /* Responsive font size for header */
-  border: 20px solid #ff0909; /* Increased border thickness */
+  border: 20px solid #fcfcfc; /* Increased border thickness */
   box-sizing: border-box; /* Ensures padding and border are included in total width/height */
   height: auto; /* Flexible height based on content */
   overflow: hidden; /* Prevents overflow */
@@ -44,7 +44,7 @@ h1 {
 
 h2 {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 60px; /* Even larger size for desktop */
+  font-size: 40px; /* Even larger size for desktop */
 }
 
 
@@ -85,7 +85,7 @@ h2 {
   .header {
     padding: 15px 40px 15px 15px; /* Adjusted padding for different device sizes */
     font-size: 5vw;
-    border: 20px solid #ff0909; /* Slightly thinner border for smaller devices */
+    border: 20px solid #000000; /* Slightly thinner border for smaller devices */
   }
   h1 { font-size: 6vw; }
   h2 { font-size: 5vw; }
@@ -228,3 +228,4 @@ li a:hover, .dropbtn:hover, .dropdown:hover .dropbtn {
   transform-origin: bottom left;
 }
 /* end of nav tab styles */
+
