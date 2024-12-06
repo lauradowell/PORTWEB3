@@ -8,6 +8,7 @@
     <script src="../ant.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
     <style>
+    
         /* Make the video responsive */
         .project-video {
             position: relative;
@@ -23,6 +24,13 @@
             left: 0;
             width: 100%;
             height: 100%;
+        }
+
+        /* Ensure images are responsive */
+        @media (max-width: 768px) {
+            .process-item img {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -44,24 +52,61 @@
             <a href="ctaapp.html" class="arrow right-arrow" style="font-size: 20px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 8px; border-radius: 10px; transition: all 0.3s ease; text-decoration: none;">→</a>
         </div>
 
-           <!-- Video Section -->
+        <!-- Video Section -->
         <div class="project-video" style="margin-top: 30px;">
-            <iframe src="https://www.youtube.com/embed/t8Psd69aeFw?si=fVEAsfGMk2Z0_GRE  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/t8Psd69aeFw?si=fVEAsfGMk2Z0_GRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-
 
         <div class="project-description">
-            <h2>About</h2>
-            <p>“SqueakSpeak” is a prototype toy for children featuring two robot mice and an interactive rug. Each mouse speaks a different language to promote social engagement and has a unique personality. The toy includes interchangeable maps on the rug to allow exploration.
-                 This project marked the beginning of my passion for educational technologies, a theme that continues to influence my work. The detailed design and development journey is presented below, emphasizing the process of ideation, prototyping, and refinement.
-            </p>
 
+            <p><i>2023 - Arduino, LED strip, Felt, 3-D printed mice, arcade buttons, 150 x 100 x 15cm</i></p>
+            <p>“SqueakSpeak” is a prototype toy for children featuring two robot mice and an interactive rug. Each mouse speaks a different language to promote social engagement and has a unique personality. The toy includes interchangeable maps on the rug to allow exploration. This project marked the beginning of my passion for educational technologies, a theme that continues to influence my work. The detailed design and development journey is presented below, emphasizing the process of ideation, prototyping, and refinement.</p>
 
-            
+            <h2>Creative Process</h2>
+
+            <!-- Process Steps: One after the other -->
+            <div class="process-item">
+                <img src="../process/process1.png" alt="Process 1">
+                <p>My creative process starts with grounding an initial idea through having conversations with other people. Once defined, I sketch the concept and use photoshop to make a mockup.</p>
+            </div>
+
+            <div class="process-item">
+                <img src="../process/process2.png" alt="Process 2">
+                <p>To find inspiration, I go to museums, read research papers, search the internet, make idea boards, etc. In this case, I was inspired by the original mouse design by Douglas Engelbart at the Science Museum to design
+                    the 3D printed toy mice.</p>
+            </div>
+
+            <div class="process-item">
+                <img src="../process/process3.png" alt="Process 3">
+                <p>The mice were ideated to have rgb sensors underneath to calculate what position of the alphabet they were on by counting how many times it passed a color. Connected by reversible zippers, the rug allows special characters to be added for different language configurations. </p>
+            </div>
+
+            <div class="process-item">
+                <img src="../process/process4.png" alt="Process 4">
+                <p>After visiting the fabric library at Central Saint Martins, I chose felt as the main material and a plastic fabric for the letters. The contrast in texture was designed to make the tactile experience distinct and accessible for visually impaired children.</p>
+            </div>
+
+            <div class="process-item">
+                <img src="../process/process5.png" alt="Process 5">
+                <p>To create the alphabet ring, I printed it on paper at the desired size and used this as a stencil. Reversible zippers were used for the demonstration, while more affordable standard zippers were used for the rest.</p>
+            </div>
+
+            <div class="process-item">
+                <img src="../process/process6.png" alt="Process 6">
+                <p>I painted a watercolour map, scanned it, and printed it using a UV printer onto stiffened felt. This material allows the map to be easily changed.</p>
+            </div>
+
+            <div class="process-item">
+                <img src="../process/process7.png" alt="Process 7">
+                <p>Now it was time to sew everything together, with the help of my grandma, we both hand-sewed, and used the sewing machine.</p>
+            </div>
+            <div class="process-item">
+                <img src="../process/process8.png" alt="Process 8">
+                <p>The Arduino sketch was straightforward, controlling LED lights to illuminate the letters of the word being spelled. Afterward, I designed some packaging for demonstration purposes and filmed it with the wonderful Kate.</p>
+            </div>
+
         </div>
 
-
-     
     </section>
 </body>
 </html>

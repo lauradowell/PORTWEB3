@@ -220,6 +220,33 @@ body {
   }
 }
 
+/* Blog style for process steps */
+.process-item {
+    margin-bottom: 40px; /* Space between each step */
+    text-align: center; /* Center the images and text */
+}
+
+/* Center the images within the .process-item */
+.process-item img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Limit image size */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Space between image and text */
+    margin-left: auto;
+    margin-right: auto; /* Center the image horizontally */
+}
+
+/* Center the text and set the font properties */
+.process-item p {
+    font-family: 'Poppins', sans-serif; /* Apply the right font */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 10px;
+    display: block;  /* Ensure paragraphs are block elements */
+    text-align: center; /* Center the text */
+}
 
 /* Project Page Styles */
 .project-page {
@@ -257,6 +284,9 @@ body {
   line-height: 1.5;
   text-align: justify;
 }
+
+
+  
 
 .project-video {
   margin-bottom: 40px;
