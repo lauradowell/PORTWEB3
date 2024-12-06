@@ -1,174 +1,352 @@
-
-/* OVERALL BASE STYLE
-Here is where the common style elements across the webpage are defined.
-Navigation tab is also defined below, as it is universal to the whole page and this is the universal stylesheet.
-*/
-
-
+/* Apply the custom font globally */
 body {
-  font-family: Arial;
-  margin: 0;
-}
-
-/* Header/Logo Title */
-.header {
-  padding: 60px;
-  text-align: right;
-  background: #f8f5f5;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  border: 30px solid #000000;
-  
-  height: 50vh; /* Set the height to 100% of the viewport height */
-  margin: 0; /* Remove any default margin that might affect the full height */
-}
-
-h1{
-  font-family: 'Bodoni Moda', serif; font-size:50px;
-}
-
-h2{
-  font-family: 'Archivo Black', sans-serif; font-size:60px;
-}
-
-p{
-  font-family: 'Bodoni Moda', serif; font-size:20px;
-}
-
-@media (max-width: 1000px) {
- h1{
-  font-size: 30px;
- }
- h2{
-  font-size: 40px;
- }
-}
-
-
-.flex-container1 {
-  display: flex;
-  flex-direction: column;
-
-}
-
-
-/* Page Content */
-
-.item1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-
-
-img {
-
-  display: -webkit-box;
-  
-  margin-left: auto;
-  width: 25%;
-  /* i want the image to adapt its size as the screen size changes*/
-  height: auto;
-  
-}
-
-#object-position {
-    object-position: right;
-  }
-
-/*end of overall styles*/
-
-
-
-/* NAV TAB STYLE */
-/*based on example: https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar */
-body {
-  background-color:white;
-}
-ul {
-  list-style-type: none;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: white;
 }
 
-li {
-  float: left;
-}
-
-li a, .dropbtn {
-  display: inline-block;
-  
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
-  font-family: 'Archivo Black', sans-serif; font-size:30px;
-  color:black;
-}
-
-li a:hover, .dropbtn:hover {
-  color: rgb(255, 255, 255);
-}
-
-li a:hover, .dropdown:hover .dropbtn{
-  background-color: rgb(252, 252, 252)
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgb(103, 73, 70);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: rgba(136,129,136,255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+/* Website name and job title container */
+.website-name {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+/* Styling for the website name */
+.website-name a {
+  color: black; /* Laura text in black */
+  font-size: 25px;
+  text-decoration: none;
+  display: block; /* Ensures the title and job description are block-level elements */
+  font-weight: bold; /* Bold for Laura Dowell Ballesta */
+}
+
+/* Styling for the job title */
+.job-title {
+  color: #888; /* Creative Tech in gray */
+  font-size: 14px; /* Smaller font size */
+  font-weight: 300; /* Thinner font */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes any default padding */
+  text-transform: uppercase; /* Capitalize letters for a clean look */
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment of items */
+  padding: 15px;
+  background-color: white; /* White navbar */
+  position: sticky; /* Makes the navbar sticky */
+  top: 0; /* Sticks the navbar to the top */
+  z-index: 1000; /* Ensures it stays above other content */
+  border-bottom: 2px solid #f4f4f4; /* Optional border to separate navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow to give some depth */
+}
+
+/* Website name styles */
+.navbar .website-name a {
+  color: black; /* Laura text in black */
+  font-size: 25px;
+  text-decoration: none;
+  display: block; /* Make it a block to handle vertical alignment better */
+}
+
+/* Styles for the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  position: relative;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-links a {
+  color: black; /* Navbar buttons in black */
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  vertical-align: middle; /* Ensure vertical alignment of links */
+  position: relative; /* Required for animation */
+  font-weight: 700; /* Medium bold for Selected Works and About */
+  font-size: 23px; /* Increase font size */
+}
+
+/* Hover underline effect - color updated for better visibility */
+.hover-underline-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333; /* Dark underline color */
+  transition: width 0.3s ease;
+}
+
+.hover-underline-animation:hover:after {
+  width: 100%;
+}
+
+/* Highlight Laura Dowell Ballesta for the main title */
+.website-name a {
+  font-weight: bold; /* Full bold for Laura Dowell Ballesta */
+}
+
+/* Dropdown styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;  /* Ensure it is above other elements */
+  border: 1px solid #f4f4f4; /* Optional border for dropdown */
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-/* animation */
-.hover-underline-animation {
-  display: inline-block;
-  position: relative; 
+/* Adjust positioning for dropdown links */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: black; /* Dropdown items in black */
 }
 
-.hover-underline-animation::after {
-  content: '';
-  position: absolute;
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+  background-color: #f4f4f4; /* Change background on hover */
+}
+
+/* Portfolio Container */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  gap: 10px; /* Reduced gap between items */
+  padding: 20px;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff; /* Set background to white */
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  padding: 10px; /* Reduced padding inside the portfolio item */
+  text-decoration: none; 
+}
+
+/* Image styling */
+.portfolio-item img {
   width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  /* line animation colour*/
-  background-color:  rgb(255, 254, 254);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  height: 100%;
+  object-fit: cover; /* Keeps the image looking nice */
+  transition: all 0.3s ease;
+  filter: grayscale(0%); /* Images in color by default */
 }
 
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  
+/* Title styling */
+.portfolio-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  text-align: left; /* Align the title to the left */
+  text-decoration: none; 
 }
-/* end*/
-/* end of nav tab styles */
+
+/* Description styling */
+.portfolio-item p {
+  font-size: 18px; /* Make description the same size as the title */
+  color: #777;
+  padding: 0 10px 10px 10px;
+  text-align: left; /* Align the description to the left */
+  margin-top: 0; /* Remove margin between title and description */
+  padding-left: 0; /* Ensure description starts exactly where the title starts */
+  text-decoration: none; 
+}
+
+/* Hover effects: Grayscale images when hovered */
+.portfolio-item:hover img {
+  filter: grayscale(100%); /* Switch to grayscale on hover */
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+}
+
+/* Mobile view adjustments for portfolio items */
+@media (max-width: 768px) {
+  .portfolio-container {
+    grid-template-columns: 1fr; /* Stack portfolio items in 1 column */
+    gap: 10px; /* Adjust the gap between items */
+  }
+
+  /* Adjusting other elements if necessary */
+  .navbar {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .navbar .website-name a {
+    font-size: 20px; /* Make the website name smaller */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 10px; /* Reduce space between items */
+    width: 100%; /* Ensure it spans the full width */
+    align-items: center; /* Center align the nav items */
+  }
+
+  .nav-links a {
+    font-size: 18px; /* Reduce the font size of nav links */
+    padding: 8px 12px; /* Reduce padding for smaller buttons */
+    width: 100%; /* Ensure links take up full width */
+    text-align: center; /* Center the text inside the link */
+  }
+}
+
+
+/* Project Page Styles */
+.project-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* White background for the project page */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.project-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 300; 
+}
+
+.project-description {
+  margin-bottom: 40px;
+}
+
+.project-description h2 {
+  font-size: 1.8rem;
+  
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  font-weight: 600; 
+}
+
+.project-description p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.project-video {
+  margin-bottom: 40px;
+}
+
+.project-video h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 300; 
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Responsive video */
+  border-radius: 8px; /* Rounded corners for the video */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  margin-bottom: 40px;
+  font-weight: 300; 
+}
+
+.project-image h3 {
+  font-size: 1.5rem;
+  font-weight: 300; 
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow to image */
+  object-fit: cover; /* Keeps the image looking good without distortion */
+}
+
+/* Ensure full height for the iframe PDF container */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Styling for the PDF container */
+.pdf-container {
+  margin-top: 30px;
+  width: 100%;
+  height: 80vh; /* Adjust height to 80% of the viewport height or set it as needed */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%; /* Ensure the iframe takes full height */
+  border: none;
+}
+
+/* Optional: If you want to make sure it doesn't overflow horizontally */
+.pdf-iframe {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto; /* Centers the iframe */
+}
+
+/* Responsive Design for Project Page */
+@media (max-width: 768px) {
+  .project-page {
+    padding:
+  }
+
+  .project-description h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-description p {
+    font-size: 1.3rem;
+  }
+
+  .project-video video {
+    max-width: 100%;
+  }
+
+  .project-image img {
+    max-width: 100%;
+    
+  }
+}
 

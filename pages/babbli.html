@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Babbli</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Link to external CSS -->
+    <script src="../ant.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        /* Make the video responsive */
+        .project-video {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%; /* Ensures it doesn't overflow its container */
+        }
+
+        .project-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+      
+        /* Ensure the PDF container is responsive */
+        .pdf-container {
+            width: 100%; /* Take up full width of the parent */
+            height: auto;
+            max-width: 100%; /* Ensure it doesn't overflow */
+            overflow: hidden; /* Hide overflow to avoid scrolling */
+            padding: 10px; /* Optional: Add some padding for better spacing */
+        }
+
+        .pdf-iframe {
+            width: 100%; /* Make iframe take full width */
+            height: 100%; /* Make iframe take full height of the container */
+            border: none; /* Remove iframe border */
+            display: block; /* Ensure it is displayed as a block-level element */
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            /* Adjust the height for mobile screens to prevent the iframe from becoming too tall */
+            .pdf-container {
+                height: 80vh; /* Use 80% of the viewport height */
+                padding: 5px; /* Optional: Reduce padding on mobile */
+            }
+            
+            .pdf-iframe {
+                height: 100%; /* Ensure it takes full container height */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="primarynav"></nav> <!-- Navbar will be dynamically injected here -->
+    </header>
+
+    <!-- Project Page Content -->
+    <section class="project-page">
+        <h1>Babbli</h1>
+
+        <!-- Arrow Container at the top -->
+        <div class="arrow-container">
+            <!-- Arrow for Next Project -->
+            <a href="nana.html" class="arrow right-arrow" style="font-size: 20px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 8px; border-radius: 10px; transition: all 0.3s ease; text-decoration: none;">→</a>
+        </div>
+
+           <!-- Video Section -->
+        <div class="project-video" style="margin-top: 30px;">
+            <iframe src="https://www.youtube.com/embed/dTgOEHQnh18?si=OBIU77zcYWVHhF8S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+
+        <div class="project-description">
+            <h2>About</h2>
+            <p>Babbli is an interactive storytelling toy powered by a large language model that creates dynamic, bilingual stories based on the child’s voice input. Designed to support second language acquisition, Babbli is an adventure companion that accompanies the child through endless stories.
+
+                The story begins by asking the child what they’d like it to be about, generating an introduction read in two languages. From there, it continues the adventure by asking follow-up questions in both languages, encouraging the child’s input to shape the narrative. The child’s responses—whether in their native or second language—guide the story, allowing for endless imaginative possibilities. 
+            </p>
+            <p>
+                Using the power of the GPT API, natural-sounding voices from ElevenLabs, and a playful mouth animation on an LED screen powered by Arduino, Babbli turns every story into an engaging experience. It speaks through its own little speaker, bringing characters and tales to life.
+
+                Stories are one of the oldest forms of human communication and they have also been proven effective as a tool in language development in both first and second language learning. Enhancing preschoolers’ reading, speaking, and listening abilities (Isbell et al., 2004).         
+            </p>
+            
+            <h2> Project Report and Research</h2>
+        </div>
+            
+            <div class="pdf-container" style="height: 150vh;">
+              
+                <iframe class="pdf-iframe" src="../bab.pdf" style="height: 100%; width: 100%;" frameborder="0"></iframe>
+            </div>
+            
+     
+    </section>
+</body>
+</html>
