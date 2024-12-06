@@ -1,465 +1,523 @@
 /* Apply the custom font globally */
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Website name and job title container */
-.website-name {
-  text-align: left;
-}
-
-/* Styling for the website name */
-.website-name a {
-  color: black; /* Laura text in black */
-  font-size: 25px;
-  text-decoration: none;
-  display: block; /* Ensures the title and job description are block-level elements */
-  font-weight: bold; /* Bold for Laura Dowell Ballesta */
-}
-
-/* Styling for the job title */
-.job-title {
-  color: #888; /* Creative Tech in gray */
-  font-size: 14px; /* Smaller font size */
-  font-weight: 300; /* Thinner font */
-  margin: 0; /* Removes any default margin */
-  padding: 0; /* Removes any default padding */
-  text-transform: uppercase; /* Capitalize letters for a clean look */
-}
-
-/* Navbar container */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Ensures vertical alignment of items */
-  padding: 15px;
-  background-color: white; /* White navbar */
-  position: sticky; /* Makes the navbar sticky */
-  top: 0; /* Sticks the navbar to the top */
-  z-index: 1000; /* Ensures it stays above other content */
-  border-bottom: 2px solid #f4f4f4; /* Optional border to separate navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow to give some depth */
-}
-
-/* Website name styles */
-.navbar .website-name a {
-  color: black; /* Laura text in black */
-  font-size: 25px;
-  text-decoration: none;
-  display: block; /* Make it a block to handle vertical alignment better */
-}
-
-/* Styles for the navigation links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links li {
-  position: relative;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-}
-
-.nav-links a {
-  color: black; /* Navbar buttons in black */
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-  vertical-align: middle; /* Ensure vertical alignment of links */
-  position: relative; /* Required for animation */
-  font-weight: 700; /* Medium bold for Selected Works and About */
-  font-size: 23px; /* Increase font size */
-}
-
-/* Hover underline effect - color updated for better visibility */
-.hover-underline-animation {
-  position: relative;
-  display: inline-block;
-}
-
-.hover-underline-animation:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #333; /* Dark underline color */
-  transition: width 0.3s ease;
-}
-
-.hover-underline-animation:hover:after {
-  width: 100%;
-}
-
-/* Highlight Laura Dowell Ballesta for the main title */
-.website-name a {
-  font-weight: bold; /* Full bold for Laura Dowell Ballesta */
-}
-
-/* Dropdown styling */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  z-index: 1;  /* Ensure it is above other elements */
-  border: 1px solid #f4f4f4; /* Optional border for dropdown */
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Adjust positioning for dropdown links */
-.dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  color: black; /* Dropdown items in black */
-}
-
-/* Hover effect for dropdown items */
-.dropdown-content a:hover {
-  background-color: #f4f4f4; /* Change background on hover */
-}
-
-/* Portfolio Container */
-.portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two items per row */
-  gap: 10px; /* Reduced gap between items */
-  padding: 20px;
-}
-
-/* Portfolio Item */
-.portfolio-item {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: #fff; /* Set background to white */
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  position: relative;
-  padding: 10px; /* Reduced padding inside the portfolio item */
-  text-decoration: none; 
-}
-
-/* Image styling */
-.portfolio-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Keeps the image looking nice */
-  transition: all 0.3s ease;
-  filter: grayscale(0%); /* Images in color by default */
-}
-
-/* Title styling */
-.portfolio-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  text-align: left; /* Align the title to the left */
-  text-decoration: none; 
-}
-
-/* Description styling */
-.portfolio-item p {
-  font-size: 18px; /* Make description the same size as the title */
-  color: #777;
-  padding: 0 10px 10px 10px;
-  text-align: left; /* Align the description to the left */
-  margin-top: 0; /* Remove margin between title and description */
-  padding-left: 0; /* Ensure description starts exactly where the title starts */
-  text-decoration: none; 
-}
-
-/* Hover effects: Grayscale images when hovered */
-.portfolio-item:hover img {
-  filter: grayscale(100%); /* Switch to grayscale on hover */
-}
-
-.portfolio-item:hover {
-  transform: scale(1.05); /* Slightly scale up the card on hover */
-}
-
-/* Mobile view adjustments for portfolio items */
-@media (max-width: 768px) {
-  .portfolio-container {
-    grid-template-columns: 1fr; /* Stack portfolio items in 1 column */
-    gap: 10px; /* Adjust the gap between items */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
   }
-
-  /* Adjusting other elements if necessary */
+  
+  /* Website name and job title container */
+  .website-name {
+    text-align: left;
+  }
+  
+  /* Styling for the website name */
+  .website-name a {
+    color: black; /* Laura text in black */
+    font-size: 25px;
+    text-decoration: none;
+    display: block; /* Ensures the title and job description are block-level elements */
+    font-weight: bold; /* Bold for Laura Dowell Ballesta */
+  }
+  
+  /* Styling for the job title */
+  .job-title {
+    color: #888; /* Creative Tech in gray */
+    font-size: 14px; /* Smaller font size */
+    font-weight: 300; /* Thinner font */
+    margin: 0; /* Removes any default margin */
+    padding: 0; /* Removes any default padding */
+    text-transform: uppercase; /* Capitalize letters for a clean look */
+  }
+  
+  /* Navbar container */
   .navbar {
-    padding: 10px; /* Reduce padding on smaller screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment of items */
+    padding: 15px;
+    background-color: white; /* White navbar */
+    position: sticky; /* Makes the navbar sticky */
+    top: 0; /* Sticks the navbar to the top */
+    z-index: 1000; /* Ensures it stays above other content */
+    border-bottom: 2px solid #f4f4f4; /* Optional border to separate navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow to give some depth */
   }
-
+  
+  /* Website name styles */
   .navbar .website-name a {
-    font-size: 20px; /* Make the website name smaller */
+    color: black; /* Laura text in black */
+    font-size: 25px;
+    text-decoration: none;
+    display: block; /* Make it a block to handle vertical alignment better */
   }
-
+  
+  /* Styles for the navigation links */
   .nav-links {
-    flex-direction: column; /* Stack nav items vertically */
-    gap: 10px; /* Reduce space between items */
-    width: 100%; /* Ensure it spans the full width */
-    align-items: center; /* Center align the nav items */
+    list-style: none;
+    display: flex;
+    gap: 15px;
   }
-
+  
+  .nav-links li {
+    position: relative;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
   .nav-links a {
-    font-size: 18px; /* Reduce the font size of nav links */
-    padding: 8px 12px; /* Reduce padding for smaller buttons */
-    width: 100%; /* Ensure links take up full width */
-    text-align: center; /* Center the text inside the link */
+    color: black; /* Navbar buttons in black */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    vertical-align: middle; /* Ensure vertical alignment of links */
+    position: relative; /* Required for animation */
+    font-weight: 700; /* Medium bold for Selected Works and About */
+    font-size: 23px; /* Increase font size */
   }
-}
-
-/* Blog style for process steps */
-.process-item {
-    margin-bottom: 40px; /* Space between each step */
-    text-align: center; /* Center the images and text */
-}
-
-/* Center the images within the .process-item */
-.process-item img {
+  
+  /* Hover underline effect - color updated for better visibility */
+  .hover-underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333; /* Dark underline color */
+    transition: width 0.3s ease;
+  }
+  
+  .hover-underline-animation:hover:after {
     width: 100%;
-    height: auto;
-    max-width: 600px; /* Limit image size */
-    border-radius: 8px;
-    margin-bottom: 15px; /* Space between image and text */
-    margin-left: auto;
-    margin-right: auto; /* Center the image horizontally */
-}
-
-/* Center the text and set the font properties */
-.process-item p {
-    font-family: 'Poppins', sans-serif; /* Apply the right font */
-    font-size: 16px;
+  }
+  
+  /* Highlight Laura Dowell Ballesta for the main title */
+  .website-name a {
+    font-weight: bold; /* Full bold for Laura Dowell Ballesta */
+  }
+  
+  /* Dropdown styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;  /* Ensure it is above other elements */
+    border: 1px solid #f4f4f4; /* Optional border for dropdown */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Adjust positioning for dropdown links */
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black; /* Dropdown items in black */
+  }
+  
+  /* Hover effect for dropdown items */
+  .dropdown-content a:hover {
+    background-color: #f4f4f4; /* Change background on hover */
+  }
+  
+  /* Portfolio Container */
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 10px; /* Reduced gap between items */
+    padding: 20px;
+  }
+  
+  /* Portfolio Item */
+  .portfolio-item {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff; /* Set background to white */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    padding: 10px; /* Reduced padding inside the portfolio item */
+    text-decoration: none; 
+  }
+  
+  /* Image styling */
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the image looking nice */
+    transition: all 0.3s ease;
+    filter: grayscale(0%); /* Images in color by default */
+  }
+  
+  /* Title styling */
+  .portfolio-item h3 {
+    font-size: 18px;
+    font-weight: bold;
     color: #333;
-    line-height: 1.6;
-    margin-top: 10px;
-    display: block;  /* Ensure paragraphs are block elements */
-    text-align: center; /* Center the text */
-}
-
-/* Project Page Styles */
-.project-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff; /* White background for the project page */
-  border-radius: 8px; /* Rounded corners for the container */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.project-page h1 {
-  font-size: 2.5rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 300; 
-}
-
-.project-description {
-  margin-bottom: 40px;
-}
-
-.project-description h2 {
-  font-size: 1.8rem;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Align the title to the left */
+    text-decoration: none; 
+  }
   
-  color: rgb(0, 0, 0);
-  margin-bottom: 10px;
-  font-weight: 600; 
-}
-
-.project-description p {
-  font-size: 1.5rem;
-  color: #666;
-  line-height: 1.5;
-  text-align: justify;
-}
-
-
+  /* Description styling */
+  .portfolio-item p {
+    font-size: 18px; /* Make description the same size as the title */
+    color: #777;
+    padding: 0 10px 10px 10px;
+    text-align: left; /* Align the description to the left */
+    margin-top: 0; /* Remove margin between title and description */
+    padding-left: 0; /* Ensure description starts exactly where the title starts */
+    text-decoration: none; 
+  }
   
-
-.project-video {
-  margin-bottom: 40px;
-}
-
-.project-video h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: 300; 
-}
-
-.project-video video {
-  width: 100%;
-  height: auto;
-  max-width: 100%; /* Responsive video */
-  border-radius: 8px; /* Rounded corners for the video */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-image {
-  margin-bottom: 40px;
-  font-weight: 300; 
-}
-
-.project-image h3 {
-  font-size: 1.5rem;
-  font-weight: 300; 
-  color: #333;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* Rounded corners for images */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow to image */
-  object-fit: cover; /* Keeps the image looking good without distortion */
-}
-
-/* Ensure the PDF container maintains its aspect ratio */
-.pdf-container {
-    width: 100%; /* Take up full width of the parent */
-    height: auto;
-    overflow: hidden; /* Hide overflow to avoid scrolling */
-    padding: 10px; /* Optional: Add some padding for better spacing */
-    display: block;
-    position: relative;
-}
-
-/* Ensure the iframe maintains the aspect ratio of the PDF */
-.pdf-container::before {
-    content: '';
-    display: block;
-    padding-top: 140%; /* Aspect ratio for a typical document (height / width = 1.4) */
-}
-
-.pdf-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; /* Remove iframe border */
-    display: block;
-}
-
-
-
-/* Responsive Design for Project Page */
-@media (max-width: 768px) {
- 
-
-    .pdf-container {
-        height: 80vh; /* Use 80% of the viewport height on mobile */
-    }
-
-    .pdf-iframe {
-        height: 100%;
-    }
-
-  .project-description h2 {
-    font-size: 1.6rem;
+  /* Hover effects: Grayscale images when hovered */
+  .portfolio-item:hover img {
+    filter: grayscale(100%); /* Switch to grayscale on hover */
   }
-
-  .project-description p {
-    font-size: 1.3rem;
+  
+  .portfolio-item:hover {
+    transform: scale(1.05); /* Slightly scale up the card on hover */
   }
-
-  .project-video video {
-    max-width: 100%;
+  
+  /* Mobile view adjustments for portfolio items */
+  @media (max-width: 768px) {
+    .portfolio-container {
+      grid-template-columns: 1fr; /* Stack portfolio items in 1 column */
+      gap: 10px; /* Adjust the gap between items */
+    }
+  
+    /* Adjusting other elements if necessary */
+    .navbar {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  
+    .navbar .website-name a {
+      font-size: 20px; /* Make the website name smaller */
+    }
+  
+    .nav-links {
+      flex-direction: column; /* Stack nav items vertically */
+      gap: 10px; /* Reduce space between items */
+      width: 100%; /* Ensure it spans the full width */
+      align-items: center; /* Center align the nav items */
+    }
+  
+    .nav-links a {
+      font-size: 18px; /* Reduce the font size of nav links */
+      padding: 8px 12px; /* Reduce padding for smaller buttons */
+      width: 100%; /* Ensure links take up full width */
+      text-align: center; /* Center the text inside the link */
+    }
   }
-
-  .project-image img {
-    max-width: 100%;
-    
+  
+  /* Blog style for process steps */
+  .process-item {
+      margin-bottom: 40px; /* Space between each step */
+      text-align: center; /* Center the images and text */
   }
-}
-
-  /* Large screen adjustments */
-@media (min-width: 1024px) and (max-width: 1200px) {
-    .pdf-container {
-        height: auto; /* Allow height to scale dynamically */
-    }
-
-    .pdf-container::before {
-        padding-top: 130%; /* Reduce the aspect ratio slightly for large screens */
-    }
-}
-
-/* Extra wide screen adjustments (beyond 1200px) */
-@media (min-width: 1200px) {
-    .pdf-container {
-        height: auto; /* Allow height to scale dynamically */
-    }
-
-    .pdf-container::before {
-        padding-top: 125%; /* Reduce the aspect ratio even more for extra wide screens */
-    }
-}
-
-/* General style for iframe responsiveness */
-.project-video {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%; /* Ensures it doesn't overflow its container */
-}
-
-.project-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Miro Board responsive container */
-.miro-container {
-    width: 100%;
-    height: 70vh; /* Adjust height of the iframe */
-    max-width: 100%;
-    overflow: hidden;
-    padding: 0; /* Remove padding to prevent overflow */
+  
+  /* Center the images within the .process-item */
+  .process-item img {
+      width: 100%;
+      height: auto;
+      max-width: 600px; /* Limit image size */
+      border-radius: 8px;
+      margin-bottom: 15px; /* Space between image and text */
+      margin-left: auto;
+      margin-right: auto; /* Center the image horizontally */
+  }
+  
+  /* Center the text and set the font properties */
+  .process-item p {
+      font-family: 'Poppins', sans-serif; /* Apply the right font */
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      margin-top: 10px;
+      display: block;  /* Ensure paragraphs are block elements */
+      text-align: center; /* Center the text */
+  }
+  
+  /* Project Page Styles */
+  .project-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White background for the project page */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  .project-page h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
     margin-bottom: 20px;
-    box-sizing: border-box; /* Ensures padding/margin are included in the width/height calculation */
-}
-
-/* Ensure the iframe takes full width and height */
-.miro-container iframe {
+    font-weight: 300; 
+  }
+  
+  .project-description {
+    margin-bottom: 40px;
+  }
+  
+  .project-description h2 {
+    font-size: 1.8rem;
+    
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-weight: 600; 
+  }
+  
+  .project-description p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  
+    
+  
+  .project-video {
+    margin-bottom: 40px;
+  }
+  
+  .project-video h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 300; 
+  }
+  
+  .project-video video {
     width: 100%;
-    height: 100%; /* Adjusted to fit the container properly */
-    border: none;
-    display: block;
+    height: auto;
+    max-width: 100%; /* Responsive video */
+    border-radius: 8px; /* Rounded corners for the video */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-image {
+    margin-bottom: 40px;
+    font-weight: 300; 
+  }
+  
+  .project-image h3 {
+    font-size: 1.5rem;
+    font-weight: 300; 
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow to image */
+    object-fit: cover; /* Keeps the image looking good without distortion */
+  }
+  
+  /* Ensure the PDF container maintains its aspect ratio */
+  .pdf-container {
+      width: 100%; /* Take up full width of the parent */
+      height: auto;
+      overflow: hidden; /* Hide overflow to avoid scrolling */
+      padding: 10px; /* Optional: Add some padding for better spacing */
+      display: block;
+      position: relative;
+  }
+  
+  /* Ensure the iframe maintains the aspect ratio of the PDF */
+  .pdf-container::before {
+      content: '';
+      display: block;
+      padding-top: 140%; /* Aspect ratio for a typical document (height / width = 1.4) */
+  }
+  
+  .pdf-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none; /* Remove iframe border */
+      display: block;
+  }
+  
+  
+  
+  /* Responsive Design for Project Page */
+  @media (max-width: 768px) {
+   
+  
+      .pdf-container {
+          height: 80vh; /* Use 80% of the viewport height on mobile */
+      }
+  
+      .pdf-iframe {
+          height: 100%;
+      }
+  
+    .project-description h2 {
+      font-size: 1.6rem;
+    }
+  
+    .project-description p {
+      font-size: 1.3rem;
+    }
+  
+    .project-video video {
+      max-width: 100%;
+    }
+  
+    .project-image img {
+      max-width: 100%;
+      
+    }
+  }
+  
+    /* Large screen adjustments */
+  @media (min-width: 1024px) and (max-width: 1200px) {
+      .pdf-container {
+          height: auto; /* Allow height to scale dynamically */
+      }
+  
+      .pdf-container::before {
+          padding-top: 130%; /* Reduce the aspect ratio slightly for large screens */
+      }
+  }
+  
+  /* Extra wide screen adjustments (beyond 1200px) */
+  @media (min-width: 1200px) {
+      .pdf-container {
+          height: auto; /* Allow height to scale dynamically */
+      }
+  
+      .pdf-container::before {
+          padding-top: 125%; /* Reduce the aspect ratio even more for extra wide screens */
+      }
+  }
+  
+  /* General style for iframe responsiveness */
+  .project-video {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%; /* Ensures it doesn't overflow its container */
+  }
+  
+  .project-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  
+  /* Miro Board responsive container */
+  .miro-container {
+      width: 100%;
+      height: 70vh; /* Adjust height of the iframe */
+      max-width: 100%;
+      overflow: hidden;
+      padding: 0; /* Remove padding to prevent overflow */
+      margin-bottom: 20px;
+      box-sizing: border-box; /* Ensures padding/margin are included in the width/height calculation */
+  }
+  
+  /* Ensure the iframe takes full width and height */
+  .miro-container iframe {
+      width: 100%;
+      height: 100%; /* Adjusted to fit the container properly */
+      border: none;
+      display: block;
+  }
+  
+  /* Mobile view adjustments for better responsiveness */
+  @media (max-width: 768px) {
+      .miro-container {
+          height: 50vh; /* Reduced height on mobile */
+          padding: 0; /* Remove padding */
+      }
+  
+      .project-video iframe {
+          height: 200px; /* Smaller video size on mobile */
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .miro-container {
+          height: 40vh; /* Even smaller height on very small screens */
+      }
+  }
+
+/* About Section Styling */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-/* Mobile view adjustments for better responsiveness */
+.about-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between; /* Space between images */
+    gap: 20px; /* Gap between the images */
+    margin-bottom: 20px; /* Add space below the images */
+}
+
+.about-item {
+    width: 48%; /* Make each image take up 48% of the container */
+}
+
+.about-item img {
+    width: 100%; /* Fill the container's width */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure image covers its box */
+    border-radius: 8px;
+}
+
+/* Paragraph styling */
+.about-box p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .miro-container {
-        height: 50vh; /* Reduced height on mobile */
-        padding: 0; /* Remove padding */
+    .about-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        gap: 15px;
     }
 
-    .project-video iframe {
-        height: 200px; /* Smaller video size on mobile */
+    .about-item {
+        width: 100%; /* Make images full-width on mobile */
     }
-}
 
-@media (max-width: 480px) {
-    .miro-container {
-        height: 40vh; /* Even smaller height on very small screens */
+    .about-box p {
+        text-align: left;
     }
 }
