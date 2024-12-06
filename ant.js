@@ -23,4 +23,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inject the navbar HTML
     document.getElementById("primarynav").innerHTML = navbarHTML;
+
+    // Function to adjust iframe height based on content
+    function adjustIframeHeight() {
+        const iframe = document.getElementById("pdfIframe");
+
+        // Ensure iframe exists on the page before attempting to adjust height
+        if (iframe) {
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            const iframeBody = iframeDocument.body;
+
+            // Adjust iframe height based on content height
+            iframe.style.height = iframeBody.scrollHeight + "px";
+        }
+    }
+
+    // Adjust iframe height on page load
+    const iframe = document.getElementById("pdfIframe");
+    if (iframe) {
+        iframe.onload = adjustIframeHeight;
+    }
+
+    // Adjust iframe height when the window is resized
+    window.onresize = adjustIframeHeight;
 });

@@ -305,25 +305,26 @@ html, body {
     margin: 0;
 }
   
-/* Styling for the PDF container */
+  /* Styling for the PDF container */
 .pdf-container {
     margin-top: 30px;
     width: 100%;
-    height: 80vh; /* Adjust height to 80% of the viewport height or set it as needed */
+    height: 80vh; /* Adjust height to 80% of the viewport height for mobile */
     overflow: hidden; /* Hide any overflow */
-    display: flex; /* Use flex to ensure proper centering */
-    justify-content: center; /* Center horizontally */
+    display: flex;
+    justify-content: center;
 }
   
   /* Styling for the iframe within the container */
 .pdf-iframe {
-    width: 100%; 
-    height: 100%; /* Ensure the iframe takes full height of the container */
+    width: 100%;
+    height: 100%; /* Default to 100% of the container height */
     border: none;
     display: block;
-    max-width: 100%; /* Ensure no horizontal overflow */
-    margin: 0 auto; /* Centers the iframe */
+    max-width: 100%;
+    margin: 0 auto;
 }
+
   
 
 /* Responsive Design for Project Page */
