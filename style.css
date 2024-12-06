@@ -299,40 +299,46 @@ body {
   object-fit: cover; /* Keeps the image looking good without distortion */
 }
 
-/* Ensure full height for the iframe PDF container */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-  
-/* Styling for the PDF container */
+/* Ensure the PDF container maintains its aspect ratio */
 .pdf-container {
-    margin-top: 30px;
-    width: 100%;
-    height: 80vh; /* Adjust height to 80% of the viewport height or set it as needed */
-    overflow: hidden; /* Hide any overflow */
-    display: flex; /* Use flex to ensure proper centering */
-    justify-content: center; /* Center horizontally */
-}
-  
-  /* Styling for the iframe within the container */
-.pdf-iframe {
-    width: 100%; 
-    height: 100%; /* Ensure the iframe takes full height of the container */
-    border: none;
+    width: 100%; /* Take up full width of the parent */
+    height: auto;
+    overflow: hidden; /* Hide overflow to avoid scrolling */
+    padding: 10px; /* Optional: Add some padding for better spacing */
     display: block;
-    max-width: 100%; /* Ensure no horizontal overflow */
-    margin: 0 auto; /* Centers the iframe */
+    position: relative;
 }
-  
+
+/* Ensure the iframe maintains the aspect ratio of the PDF */
+.pdf-container::before {
+    content: '';
+    display: block;
+    padding-top: 140%; /* Aspect ratio for a typical document (height / width = 1.4) */
+}
+
+.pdf-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove iframe border */
+    display: block;
+}
+
+
 
 /* Responsive Design for Project Page */
 @media (max-width: 768px) {
  
 
-  .pdf-container {
-    height: 60vh; /* Adjust to 60% of viewport height on smaller screens */
-  }
+    .pdf-container {
+        height: 80vh; /* Use 80% of the viewport height on mobile */
+    }
+
+    .pdf-iframe {
+        height: 100%;
+    }
 
   .project-description h2 {
     font-size: 1.6rem;
@@ -352,3 +358,24 @@ html, body {
   }
 }
 
+  /* Large screen adjustments */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .pdf-container {
+        height: auto; /* Allow height to scale dynamically */
+    }
+
+    .pdf-container::before {
+        padding-top: 130%; /* Reduce the aspect ratio slightly for large screens */
+    }
+}
+
+/* Extra wide screen adjustments (beyond 1200px) */
+@media (min-width: 1200px) {
+    .pdf-container {
+        height: auto; /* Allow height to scale dynamically */
+    }
+
+    .pdf-container::before {
+        padding-top: 125%; /* Reduce the aspect ratio even more for extra wide screens */
+    }
+}
