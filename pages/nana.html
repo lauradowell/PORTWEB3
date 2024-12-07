@@ -43,45 +43,7 @@
             display: block; /* Block-level element */
         }
 
-        /* Mobile view adjustments */
-        @media (max-width: 768px) {
-            .pdf-container {
-                height: 80vh; /* Adjust height for mobile */
-                padding: 5px; /* Reduce padding on mobile */
-            }
 
-            .pdf-iframe {
-                height: 100%; /* Ensure it takes full container height */
-            }
-        }
-
-        /* Medium to Large screen adjustments (1024px and up) */
-        @media (min-width: 1024px) {
-            .pdf-container {
-                max-width: 90%; /* Limit width to 90% of the parent */
-                height: auto;
-                margin: 0 auto; /* Center the container */
-            }
-
-            .pdf-iframe {
-                width: 100%;
-                height: 100vh; /* Maintain full viewport height */
-            }
-        }
-
-        /* Extra wide screens (1200px and above) */
-        @media (min-width: 1200px) {
-            .pdf-container {
-                max-width: 80%; /* Further limit width on very large screens */
-                height: auto;
-                margin: 0 auto; /* Center the container */
-            }
-
-            .pdf-iframe {
-                width: 100%;
-                height: 90vh; /* Adjust height to maintain proportional fit */
-            }
-        }
     </style>
 </head>
 <body>
@@ -120,12 +82,12 @@
             <h2> UX Experience Map</h2>
         </div>
 
-        <!-- PDF Section -->
-        <div class="pdf-container">
-            
+        <!-- PDF Section with border applied -->
+        <div class="pdf-container pdf-container-bordered">
             <iframe src="../map.pdf" class="pdf-iframe" frameborder="0"></iframe>
         </div>
-     
+
+        
     </section>
 </body>
 </html>

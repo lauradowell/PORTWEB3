@@ -520,18 +520,90 @@ body {
     .about-box p {
         text-align: left;
     }
+   
     .pdf-container {
-      width: 100%; /* Take full screen width */
-      height: auto; /* Allow height to adjust dynamically */
-      padding: 0; /* Remove extra padding to avoid space */
-      overflow: hidden; /* Prevent scrollbars */
-  }
+        height: 90vh; /* Allow for both PDF content and controls */
+        overflow: hidden; /* Ensure proper scrolling */
+        padding: 0; /* Remove extra padding for better fit */
+    }
 
-  .pdf-iframe {
-      width: 100%; /* Fit the width of the screen */
-      height: auto; /* Maintain aspect ratio */
-      aspect-ratio: 16 / 9; /* Optional: Define the PDF aspect ratio */
-      display: block;
-      border: none;
+    .pdf-iframe {
+        width: 100%;
+        height: 100%; /* Take the entire height of the container */
+    }
+
+    .fallback-text {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+  
+  
+}
+
+/* PDF Container for responsiveness with borders */
+.pdf-container {
+  width: 100%; /* Full width by default */
+  height: auto;
+  padding: 10px; /* Optional: Add padding */
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  box-sizing: border-box; /* Ensures padding and border don't affect overall width */
+}
+
+/* Apply white borders to left and right sides */
+.pdf-container-bordered {
+  border-left: 10px solid white; /* White border color */
+  border-right: 10px solid white; /* White border color */
+}
+
+/* Super small screens (mobile devices) */
+@media (max-width: 480px) {
+  .pdf-container {
+      width: 100%; /* Full width */
+      padding: 5px; /* Smaller padding */
+  }
+  .pdf-container-bordered {
+      border-left: 5px solid white;
+      border-right: 5px solid white;
+  }
+}
+
+/* Small screens (tablets and smaller desktops) */
+@media (max-width: 768px) {
+  .pdf-container {
+      width: 100%; /* Full width */
+      padding: 10px; /* Normal padding */
+  }
+  .pdf-container-bordered {
+      border-left: 8px solid white;
+      border-right: 8px solid white;
+  }
+}
+
+/* Large screens (standard desktops and laptops) */
+@media (min-width: 1024px) {
+  .pdf-container {
+      width: 90%; /* 90% of the parent width */
+      padding: 20px; /* Add more padding */
+      margin: 0 auto; /* Center the container */
+  }
+  .pdf-container-bordered {
+      border-left: 15px solid white;
+      border-right: 15px solid white;
+  }
+}
+
+/* Super large screens (extra-large monitors) */
+@media (min-width: 1200px) {
+  .pdf-container {
+      width: 80%; /* 80% of the parent width */
+      padding: 30px; /* Add more padding */
+      margin: 0 auto; /* Center the container */
+  }
+  .pdf-container-bordered {
+      border-left: 20px solid white;
+      border-right: 20px solid white;
   }
 }
