@@ -25,24 +25,7 @@
             height: 100%;
         }
 
-        /* PDF Container for responsiveness */
-        .pdf-container {
-            width: 100%; /* Full width */
-            height: auto;
-            padding: 10px; /* Optional: Add some padding for better spacing */
-            display: block;
-            position: relative;
-            margin-top: 30px;
-        }
-
-        /* Ensure the iframe adjusts responsively */
-        .pdf-iframe {
-            width: 100%; /* Take full width of the container */
-            height: 100vh; /* Full viewport height */
-            border: none; /* Remove border */
-            display: block; /* Block-level element */
-        }
-
+    
 
     </style>
 </head>
@@ -83,9 +66,11 @@
         </div>
 
         <!-- PDF Section with border applied -->
-        <div class="pdf-container pdf-container-bordered">
-            <iframe src="../map.pdf" class="pdf-iframe" frameborder="0"></iframe>
-        </div>
+     <!-- PDF Section with white border applied -->
+    <div class="pdf-container pdf-container-bordered">
+        <iframe src="../map.pdf" class="pdf-iframe" frameborder="0"></iframe>
+    </div>
+
 
         
     </section>

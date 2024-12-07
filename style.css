@@ -562,6 +562,7 @@ body {
 @media (max-width: 480px) {
   .pdf-container {
       width: 100%; /* Full width */
+      height: 40vh; /* Adjust height more conservatively for smaller screens */
       padding: 5px; /* Smaller padding */
   }
   .pdf-container-bordered {
@@ -574,6 +575,7 @@ body {
 @media (max-width: 768px) {
   .pdf-container {
       width: 100%; /* Full width */
+      height: 50vh; /* Adjust height proportionally */
       padding: 10px; /* Normal padding */
   }
   .pdf-container-bordered {
@@ -586,6 +588,7 @@ body {
 @media (min-width: 1024px) {
   .pdf-container {
       width: 90%; /* 90% of the parent width */
+      height: 80vh; /* Adjust height proportionally */
       padding: 20px; /* Add more padding */
       margin: 0 auto; /* Center the container */
   }
@@ -599,6 +602,7 @@ body {
 @media (min-width: 1200px) {
   .pdf-container {
       width: 80%; /* 80% of the parent width */
+      height: 80vh; /* Adjust height proportionally */
       padding: 30px; /* Add more padding */
       margin: 0 auto; /* Center the container */
   }
