@@ -520,4 +520,18 @@ body {
     .about-box p {
         text-align: left;
     }
+    .pdf-container {
+      width: 100%; /* Take full screen width */
+      height: auto; /* Allow height to adjust dynamically */
+      padding: 0; /* Remove extra padding to avoid space */
+      overflow: hidden; /* Prevent scrollbars */
+  }
+
+  .pdf-iframe {
+      width: 100%; /* Fit the width of the screen */
+      height: auto; /* Maintain aspect ratio */
+      aspect-ratio: 16 / 9; /* Optional: Define the PDF aspect ratio */
+      display: block;
+      border: none;
+  }
 }
