@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="../style.css">
     <script src="../ant.js" defer></script> <!-- Link to the JS file where printHTMLprimarynav is defined -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        .about-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center; /* Ensures vertical alignment */
+        }
+
+        .about-item img, 
+        .about-item iframe {
+            height: 400px; /* Match height for both elements */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        .about-item {
+            flex: 1; /* Allow items to grow and align proportionally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .about-box p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,15 +60,19 @@
 
                 <!-- Second Image -->
                 <div class="about-item">
-                    <img src="../bananasuit2.png" alt="Image Description 2">
+                    <iframe 
+                        src="https://giphy.com/embed/qmnsDs8Wm8Yy2I6O6P" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
 
             <!-- Paragraph below both images -->
-            <p> Hi there! I’m a Creative Technologist with a focus on Human-Computer Interaction. I work at the intersection of AI, UX design, and creative technology, always looking for ways to make tech more human and accessible. My goal is to create tools that help people, especially children, better understand and engage with the world around them. Right now, I’m diving deeper into UX/UI design through my master’s studies. I believe technology should be empowering, educational, and help bring people closer together.
+            <p>
+                Hi there! I’m a Creative Technologist with a focus on Human-Computer Interaction. I work at the intersection of AI, UX design, and creative technology, always looking for ways to make tech more human and accessible. My goal is to create tools that help people, especially children, better understand and engage with the world around them. Right now, I’m diving deeper into UX/UI design through my master’s studies. I believe technology should be empowering, educational, and help bring people closer together.
             </p>
         </div>
     </section>
 </body>
 </html>
-
