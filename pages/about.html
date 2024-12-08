@@ -7,7 +7,75 @@
     <link rel="stylesheet" href="../style.css">
     <script src="../ant.js" defer></script> <!-- Link to the JS file where printHTMLprimarynav is defined -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
-    
+    <style>
+        /* Flexbox container settings to make items align horizontally */
+        .about-container {
+            display: flex;
+            justify-content: space-between; /* Ensure items are spaced out */
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap; /* Prevent wrapping of items */
+        }
+
+        /* Image styles */
+        .about-item img, 
+        .about-item iframe {
+            width: 100%;  /* Ensure images fill container */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure it doesn't stretch beyond its container */
+            border: none; /* Remove iframe border */
+        }
+
+        .about-item {
+            flex: 1 1 45%; /* Make items take up about 45% of the available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px; /* Optional: Limit the maximum width for larger screens */
+        }
+
+        .about-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            /* For smaller screens, make images stack vertically */
+            .about-container {
+                flex-direction: column; /* Stack images vertically */
+            }
+
+            .about-item img, 
+            .about-item iframe {
+                width: 100%; /* Ensure images fill the width */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+        @media (min-width: 1024px) {
+            /* For smaller screens, make images stack vertically */
+            .about-container {
+                flex-direction: row; /* Stack images vertically */
+            }
+
+            .about-item img, 
+            .about-item iframe {
+                width: 100%; /* Ensure images fill the width */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* On extra small screens (like phones), adjust further */
+            .about-item img, 
+            .about-item iframe {
+                max-width: 100%; /* Ensure GIF doesn't overflow */
+                height: auto; /* Allow height to scale */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,19 +92,15 @@
                     <img src="../bananasuit1.png" alt="Image Description 1">
                 </div>
 
-                <!-- Second Image -->
+                <!-- Second Image (GIF) -->
                 <div class="about-item">
-                    <iframe 
-                        src="https://giphy.com/embed/qmnsDs8Wm8Yy2I6O6P" 
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
+                    <img src="https://media.giphy.com/media/qmnsDs8Wm8Yy2I6O6P/giphy.gif" alt="Animated GIF">
                 </div>
             </div>
 
             <!-- Paragraph below both images -->
             <p>
-                Hi there! I’m a Creative Technologist with a focus on Human-Computer Interaction. I work at the intersection of AI, UX design, and creative technology, always looking for ways to make tech more human and accessible. My goal is to create tools that help people, especially children, better understand and engage with the world around them. I believe technology should be empowering, educational, and help bring people closer together.
+                Hi there! I’m a Creative Technologist with a focus on Human-Computer Interaction. I work at the intersection of AI, UX design, and creative technology, always looking for ways to make tech more human and accessible. My goal is to create tools that help people, especially children, better understand and engage with the world around them. Right now, I’m diving deeper into UX/UI design through my master’s studies. I believe technology should be empowering, educational, and help bring people closer together.
             </p>
         </div>
     </section>
