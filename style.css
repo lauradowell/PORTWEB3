@@ -171,7 +171,7 @@ body {
 
 /* Description styling */
 .portfolio-item p {
-  font-size: 16px; /* Make description the same size as the title */
+  font-size: 18px; /* Make description the same size as the title */
   color: #777;
   padding: 0 10px 10px 10px;
   text-align: left; /* Align the description to the left */
@@ -240,7 +240,7 @@ body {
 /* Center the text and set the font properties */
 .process-item p {
     font-family: 'Poppins', sans-serif; /* Apply the right font */
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
     line-height: 1.6;
     margin-top: 10px;
@@ -279,7 +279,7 @@ body {
 }
 
 .project-description p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #666;
   line-height: 1.5;
   text-align: justify;
