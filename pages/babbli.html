@@ -42,18 +42,20 @@
             display: block; /* Ensure it is displayed as a block-level element */
         }
 
-        /* Mobile view adjustments */
+            /* Mobile view adjustments */
         @media (max-width: 768px) {
-            /* Adjust the height for mobile screens to prevent the iframe from becoming too tall */
             .pdf-container {
+                width: 100%; /* Use the full width of the viewport */
                 height: 80vh; /* Use 80% of the viewport height */
-                padding: 5px; /* Optional: Reduce padding on mobile */
+                padding: 0; /* Remove extra padding for more space */
             }
             
             .pdf-iframe {
-                height: 100%; /* Ensure it takes full container height */
+                width: 100%; /* Ensure it stretches to the container's full width */
+                height: 100%; /* Fill the container's height */
             }
         }
+
 
 
     </style>
