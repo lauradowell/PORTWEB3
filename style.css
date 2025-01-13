@@ -692,7 +692,7 @@ x
 
 /* Hover effect for links */
 .external-link:hover {
-  background-color: #767676;
+  background-color: #979797;
   color: #fff;
   transform: scale(1.05); /* Slight zoom effect */
 }
