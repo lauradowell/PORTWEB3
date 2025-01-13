@@ -667,3 +667,44 @@ body {
       height: 100% !important;
   }
 }
+
+ /* Style the container for links */
+ .links-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between links */
+  margin-top: 20px;
+}
+
+/* Style for external links */
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007BFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid #007BFF;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for links */
+.external-link:hover {
+  background-color: #007BFF;
+  color: #fff;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Style for link icons */
+.link-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Adjust icon for emoji */
+.link-icon span {
+  font-size: 20px;
+}
