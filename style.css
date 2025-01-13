@@ -681,11 +681,11 @@ x
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #000000;
+  color: #393939;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 15px;
-  border: 2px solid #424242;
+  border: 2px solid #393939;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
