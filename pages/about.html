@@ -1,32 +1,120 @@
-<section class="about-section">
-    <h1>ABOUT</h1>
-    <div class="about-box">
-        <div class="about-container">
-            <!-- First Image -->
-            <div class="about-item">
-                <img src="../bananasuit1.jpg" alt="Image Description 1">
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../ldb.png" type="image/x-icon">
+    <script src="../ant.js" defer></script> <!-- Link to the JS file where printHTMLprimarynav is defined -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        /* Flexbox container settings to make items align horizontally */
+        .about-container {
+            display: flex;
+            justify-content: space-between; /* Ensure items are spaced out */
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap; /* Prevent wrapping of items */
+        }
 
-            <!-- Second Image (GIF) -->
-            <div class="about-item">
-                <img src="https://media.giphy.com/media/qmnsDs8Wm8Yy2I6O6P/giphy.gif" alt="Animated GIF">
-            </div>
-        </div>
+        /* Image styles */
+        .about-item img, 
+        .about-item iframe {
+            width: 100%;  /* Ensure images fill container */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure it doesn't stretch beyond its container */
+            border: none; /* Remove iframe border */
+        }
 
-        <!-- Paragraph below both images -->
-        <p>
-            Hi there! I’m a Creative Technologist with a focus on Human-Computer Interaction. I work at the intersection of AI, UX design, and creative technology, always looking for ways to make tech more human and accessible. My goal is to create tools that help people, especially children, better understand and engage with the world around them. Right now, I’m diving deeper into UX/UI design through my master’s studies. I believe technology should be empowering, educational, and help bring people closer together.
-        </p>
+        .about-item {
+            flex: 1 1 45%; /* Make items take up about 45% of the available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px; /* Optional: Limit the maximum width for larger screens */
+        }
 
-        <!-- PDF CV Link -->
-        <p>
-           
+        .about-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
 
-            <a href="www.linkedin.com/in/lauradowellballesta" target="_blank" style="text-decoration: none; color: #007BFF; display: inline-flex; align-items: center;">
-                <img src="../linkedin-icon.png" alt="LinkedIn Icon" style="width: 16px; height: 16px; margin-right: 8px;">
-                <strong>Visit My LinkedIn Profile</strong>
-            </a>
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            /* For smaller screens, make images stack vertically */
+            .about-container {
+                flex-direction: column; /* Stack images vertically */
+            }
+
+            .about-item img, 
+            .about-item iframe {
+                width: 100%; /* Ensure images fill the width */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+        @media (min-width: 1024px) {
+            /* For smaller screens, make images stack vertically */
+            .about-container {
+                flex-direction: row; /* Stack images vertically */
+            }
+
+            .about-item img, 
+            .about-item iframe {
+                width: 100%; /* Ensure images fill the width */
+                height: auto; /* Maintain aspect ratio */
+            }
             
-        </p>
-    </div>
-</section>
+        }
+
+        @media (max-width: 480px) {
+            /* On extra small screens (like phones), adjust further */
+            .about-item img, 
+            .about-item iframe {
+                max-width: 100%; /* Ensure GIF doesn't overflow */
+                height: auto; /* Allow height to scale */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="primarynav"></nav> <!-- Navbar will be dynamically injected here -->
+    </header>
+
+    <!-- Page Content -->
+    <section class="about-section">
+        <h1>ABOUT</h1>
+        <div class="about-box">
+            <div class="about-container">
+                <!-- First Image -->
+                <div class="about-item">
+                    <img src="../bananasuit1.jpg" alt="Image Description 1">
+                </div>
+
+                <!-- Second Image (GIF) -->
+                <div class="about-item">
+                    <img src="https://media.giphy.com/media/qmnsDs8Wm8Yy2I6O6P/giphy.gif" alt="Animated GIF">
+                </div>
+            </div>
+
+            <!-- Paragraph below both images -->
+            <p>
+                Hi there! I’m a Creative Technologist with a focus on Human-Computer Interaction. I work at the intersection of AI, UX design, and creative technology, always looking for ways to make tech more human and accessible. My goal is to create tools that help people, especially children, better understand and engage with the world around them. Right now, I’m diving deeper into UX/UI design through my master’s studies. I believe technology should be empowering, educational, and help bring people closer together.
+            </p>
+            <p>
+                <a href="../CV_LAURA_DOWELL.pdf" target="_blank" style="text-decoration: none; color: #007BFF;">
+                    <strong>Download My CV (PDF)</strong>
+                </a>
+
+                <a href="www.linkedin.com/in/lauradowellballesta" target="_blank" style="text-decoration: none; color: #007BFF; display: inline-flex; align-items: center;">
+                    <img src="../linkedin-icon.png" alt="LinkedIn Icon" style="width: 16px; height: 16px; margin-right: 8px;">
+                    <strong>Visit My LinkedIn Profile</strong>
+                </a>
+            </p>
+        </div>
+    </section>
+</body>
+</html>
