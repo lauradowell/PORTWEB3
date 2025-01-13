@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li class="dropdown">
                     <a class="hover-underline-animation dropbtn" href="javascript:void(0)">SELECTED WORKS</a>
                     <div class="dropdown-content">
-                        <a class="p1" href="${basePath}index.html">Portfolio</a>
+                        <a class="p1" href="${basePath}index.html">PORTFOLIO</a>
                     </div>
                 </li>
             </ul>
