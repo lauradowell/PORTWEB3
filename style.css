@@ -681,18 +681,18 @@ x
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #007BFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 15px;
-  border: 2px solid #007BFF;
+  border: 2px solid #424242;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 /* Hover effect for links */
 .external-link:hover {
-  background-color: #007BFF;
+  background-color: #767676;
   color: #fff;
   transform: scale(1.05); /* Slight zoom effect */
 }
