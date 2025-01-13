@@ -8,22 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="job-title">Creative Technologist</p>
             </div>
             <ul class="nav-links">
-                <li>
-                    <a class="hover-underline-animation" href="${basePath}pages/about.html">ABOUT</a>
+                <li class="dropdown">
+                    <a class="hover-underline-animation dropbtn" href="javascript:void(0)">ABOUT</a>
+                    <!-- Dropdown for About -->
                     <div class="dropdown-content">
-                    <a class="p1" href="${basePath}skills.html">SKILLS</a>
-                </div>
+                        <a href="${basePath}pages/about.html">About Me</a>
+                        <a href="${basePath}pages/skills.html">Skills</a>
+                    </div>
                 </li>
                 <li class="dropdown">
                     <a class="hover-underline-animation dropbtn" href="javascript:void(0)">SELECTED WORKS</a>
                     <div class="dropdown-content">
-                        <a class="p1" href="${basePath}index.html">PORTFOLIO</a>
+                        <a class="p1" href="${basePath}index.html">Portfolio</a>
                     </div>
                 </li>
-                
             </ul>
         </div>
     `;
+
 
     // Inject the navbar HTML
     document.getElementById("primarynav").innerHTML = navbarHTML;

@@ -563,7 +563,7 @@ body {
       flex-direction: column; /* Stack items vertically on mobile */
       gap: 25px;
   }
-
+x
   .about-item {
       width: 100%; /* Make images full-width on mobile */
   }
