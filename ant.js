@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a class="hover-underline-animation dropbtn" href="javascript:void(0)">ABOUT</a>
                     <!-- Dropdown for About -->
                     <div class="dropdown-content">
-                        <a href="${basePath}pages/about.html">ABOUT ME</a>
-                        <a href="${basePath}pages/skills.html">SKILLS</a>
+                        <a href="${basePath}pages/about.html">About me</a>
+                        <a href="${basePath}pages/skills.html">Skills</a>
                     </div>
                 </li>
                 <li class="dropdown">
