@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <ul class="nav-links">
                 <li>
                     <a class="hover-underline-animation" href="${basePath}pages/about.html">ABOUT</a>
+                    <div class="dropdown-content">
+                    <a class="p1" href="${basePath}skills.html">SKILLS</a>
+                </div>
                 </li>
                 <li class="dropdown">
                     <a class="hover-underline-animation dropbtn" href="javascript:void(0)">SELECTED WORKS</a>
