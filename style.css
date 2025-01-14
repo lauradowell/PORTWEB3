@@ -708,3 +708,26 @@ x
 .link-icon span {
   font-size: 20px;
 }
+
+/* Footer styles */
+footer {
+  background-color: rgb(105, 105, 105); /* Dark gray background */
+  color: white;
+  position: relative; /* Changes to be positioned at the end of the page */
+  width: 100%;
+  padding: 10px;
+  text-align: center; /* Center the text */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 100px; /* Ensures it stays at the bottom if content is shorter */
+}
+
+body {
+  min-height: 100vh; /* Ensures body is at least the height of the screen */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Ensures the content section takes up the available space */
+}
