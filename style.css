@@ -687,11 +687,13 @@ x
   color: #1a1a1a;
   background: transparent;
   border: 2px solid #1a1a1a;
+  padding: 14px 28px;
 }
 .external-link:hover {
+  background-color: #1a1a1a;
   color: white;
-  background: #1a1a1a;
 }
+
 
 
 .external-link:active {
