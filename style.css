@@ -692,7 +692,7 @@ x
 }
 
 .external-link:hover {
-  background: linear-gradient(135deg, #ffffff, #e6e6e6); /* Light grey gradient on hover */
+  background: linear-gradient(135deg, #ffffffc7, #e6e6e6a0); /* Light grey gradient on hover */
   color: #2b2b2b; /* Dark grey text for contrast */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow for hover effect */
   transform: translateY(-2px); /* Lift effect */
