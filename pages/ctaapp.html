@@ -21,8 +21,8 @@
 
         .project-page {
             width: 90%;
-            max-width: 600px; /* Match the reference width */
-            margin: 0 auto;
+            max-width: 600px; /* Restrict the layout width */
+            margin: 20px auto; /* Center the content with space at the top and bottom */
             padding: 20px;
             background-color: white;
             border-radius: 10px;
@@ -36,7 +36,7 @@
 
         /* Miro Board Container */
         .miro-container {
-            width: 90%;
+            width: 100%;
             padding-top: 56.25%; /* Maintain a 16:9 aspect ratio */
             position: relative;
             margin-bottom: 20px; /* Space below the Miro board */
@@ -49,7 +49,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 90%;
+            width: 100%;
             height: 100%;
             border: none;
         }
@@ -59,7 +59,7 @@
             width: 100%;
             padding-top: 56.25%; /* Maintain a 16:9 aspect ratio */
             position: relative;
-            margin-top: 20px;
+            margin-bottom: 20px;
             overflow: hidden;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -70,7 +70,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 90%;
+            width: 100%;
             height: 100%;
             border: none;
         }
@@ -78,7 +78,8 @@
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             .project-page {
-                width: 90%;
+                width: 95%;
+                padding: 15px;
             }
 
             .miro-container, .project-video {
