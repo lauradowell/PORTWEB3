@@ -697,12 +697,18 @@ x
   transform: translateY(-2px); /* Subtle lift effect */
 }
 
-.external-link .link-icon {
-  width: 20px; /* Adjust icon size */
-  height: 20px;
-  filter: invert(100%); /* Make icons white for consistency */
+.external-link {
+  background: linear-gradient(135deg, #3a3a3a, #1f1f1f); /* Gradient from medium grey to dark grey */
+  color: #ffffff; /* White text */
+  border: none; /* Remove border for a sleeker look */
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.external-link:hover .link-icon {
-  filter: invert(0%); /* Change icon color on hover */
+.external-link:hover {
+  background: linear-gradient(135deg, #ffffff, #e6e6e6); /* Gradient from white to light grey */
+  color: #2c2c2c; /* Dark grey text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
+
