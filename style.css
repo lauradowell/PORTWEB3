@@ -671,54 +671,53 @@ x
 .links-container {
   display: flex;
   justify-content: center;
-  gap: 30px; /* Space between links */
-  margin-top: 30px;
+  gap: 20px; /* Space between links */
+  margin-top: 20px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between links */
+  margin-top: 20px;
+  padding: 0 10px; /* Ensure some padding on smaller screens */
 }
 
 .external-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px; /* Space between icon and text */
-  padding: 12px 28px; /* Adjusted padding for better usability */
-  text-decoration: none; /* Remove underlines */
-  color: #000; /* Black text color */
-  background: #fff; /* White background */
-  border: 2px solid #000; /* Black border for definition */
-  border-radius: 25px; /* Rounded edges */
-  font-size: 16px; /* Readable font size */
-  font-weight: 600; /* Semi-bold text for emphasis */
-  font-family: 'Poppins', sans-serif; /* Match font with the rest of the page */
-  transition: all 0.3s ease; /* Smooth transitions */
+  color: #1a1a1a;
+  background: transparent;
+  border: 2px solid #1a1a1a;
+  padding: 14px 28px;
+}
+.external-link:hover {
+  background-color: #1a1a1a;
+  color: white;
 }
 
-.external-link:hover {
-  background: #000; /* Black background on hover */
-  color: #fff; /* White text on hover */
-  border: 2px solid #fff; /* White border on hover */
-}
 
 .external-link:active {
-  transform: scale(0.98); /* Slightly shrink button on click */
+  transform: scale(0.95); /* Slightly shrink button on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
 }
 
+
 .external-link .link-icon {
-  width: 18px; /* Icon size */
-  height: 18px;
+  width: 20px; /* Icon size */
+  height: 20px;
   filter: invert(0%); /* Neutral icon color */
-  transition: filter 0.3s ease; /* Smooth transition for icon color */
 }
 
 .external-link:hover .link-icon {
-  filter: invert(100%); /* White icon on hover */
+  filter: invert(20%); /* Slightly darker icon on hover */
 }
 
+/* Media query for smaller screens */
 @media (max-width: 480px) {
   .external-link {
-    padding: 10px 22px; /* Add more padding for small screens */
+    padding: 16px 24px; /* Add more padding for small screens */
     font-size: 14px; /* Slightly smaller font for better fit */
   }
 }
-
 
 
 /* Footer styles */
@@ -730,7 +729,7 @@ footer {
   padding: 10px;
   text-align: center; /* Center the text */
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   margin-top: 100px; /* Ensures it stays at the bottom if content is shorter */
 }
 
