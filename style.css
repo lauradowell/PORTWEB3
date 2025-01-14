@@ -731,17 +731,20 @@ x
 
 
 /* Footer styles */
-.footer {
-  background-color: black;
+/* Footer styles */
+footer {
+  background-color: rgb(74, 74, 74); /* Dark gray background */
   color: white;
-  text-align: center;
-  padding: 10px 0;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  font-size: 14px;
-  font-weight: 300;
+  width: calc(100% + 20px); /* Slightly thicker width */
+  left: -10px; /* Adjust position to center with the extra width */
+  padding: 10px;
+  text-align: right; /* Align text to the right */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
+
 
 .footer p {
   margin: 0;
