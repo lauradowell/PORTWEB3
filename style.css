@@ -710,25 +710,24 @@ x
   font-size: 20px;
 }
 
-/* Footer styles */
 footer {
-
   background-color: rgb(105, 105, 105); /* Dark gray background */
   color: white;
-  position: relative; /* Changes to be positioned at the end of the page */
+  position: relative; /* Keeps footer at the bottom of the page */
   width: 100%;
   padding: 10px;
   text-align: center; /* Center the text */
   font-size: 13px;
-  margin-top: 100px; /* Ensures it stays at the bottom if content is shorter */
+  margin-top: 100px; /* Space above the footer */
   overflow-x: hidden; 
+  font-family: 'Poppins', sans-serif; 
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
-
 
 /* Mobile adjustment for footer */
 @media (max-width: 768px) {
   footer {
-    padding: 10px 5%; /* Add some horizontal padding for better appearance */
+    padding: 10px; /* Remove percentage padding for smaller screens */
     font-size: 12px; /* Slightly smaller font size on smaller screens */
   }
 }
