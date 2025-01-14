@@ -713,11 +713,15 @@ x
 }
 
 /* Media query for smaller screens */
+/* Media query for smaller screens */
 @media (max-width: 480px) {
+  .links-container {
+    padding: 0 20px; /* Add padding to the left and right of the container */
+  }
+  
   .external-link {
-    padding: 18px 26px; /* Add more padding for small screens */
+    padding: 16px 24px; /* Adjust padding for the buttons */
     font-size: 14px; /* Slightly smaller font for better fit */
-    margin: 0 10px; /* Add margin to give space on the sides */
   }
 }
 
