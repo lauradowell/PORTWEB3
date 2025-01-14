@@ -679,31 +679,34 @@ x
   display: inline-flex;
   align-items: center;
   gap: 8px; /* Space between icon and text */
-  padding: 12px 24px; /* Adjust padding for a balanced look */
+  padding: 12px 24px; /* Balanced padding */
   text-decoration: none; /* Remove underlines */
-  color: #1a1a1a; /* White text color */
-  background: linear-gradient(135deg, #c7c7c7, #898888); /* Gradient from medium grey to dark grey */
-  border: none; /* Remove border */
+  color: #1a1a1a; /* Neutral text color */
+  background: #c7c7c7; /* Light grey background */
+  border: none; /* No border */
   border-radius: 8px; /* Slightly rounded corners */
-  font-size: 16px; /* Adjust font size */
+  font-size: 16px; /* Readable font size */
   font-weight: 600; /* Semi-bold text for emphasis */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-  transition: all 0.3s ease; /* Smooth hover transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
 }
 
 .external-link:hover {
-  background: linear-gradient(135deg, #ffffffc7, #e6e6e6a0); /* Light grey gradient on hover */
-  color: #2b2b2b; /* Dark grey text for contrast */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow for hover effect */
-  transform: translateY(-2px); /* Lift effect */
+  background: #e6e6e6; /* Lighter grey on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+
+.external-link:active {
+  transform: scale(0.95); /* Slightly shrink button on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
 }
 
 .external-link .link-icon {
   width: 20px; /* Icon size */
   height: 20px;
-  filter: invert(100%); /* Ensure icons are white */
+  filter: invert(0%); /* Neutral icon color */
 }
 
 .external-link:hover .link-icon {
-  filter: invert(0%); /* Make icons dark grey on hover */
+  filter: invert(20%); /* Slightly darker icon on hover */
 }
