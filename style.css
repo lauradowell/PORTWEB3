@@ -728,3 +728,21 @@ x
     font-size: 14px; /* Slightly smaller font for better fit */
   }
 }
+
+
+/* Footer styles */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer p {
+  margin: 0;
+}
