@@ -675,24 +675,32 @@ x
   margin-top: 20px;
 }
 
+.links-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between links */
+  margin-top: 20px;
+  padding: 0 10px; /* Ensure some padding on smaller screens */
+}
+
 .external-link {
   display: inline-flex;
   align-items: center;
   gap: 8px; /* Space between icon and text */
-  padding: 12px 24px; /* Balanced padding */
+  padding: 14px 28px; /* Adjusted padding for better usability */
   text-decoration: none; /* Remove underlines */
   color: #1a1a1a; /* Neutral text color */
-  background: #c7c7c7; /* Light grey background */
-  border: none; /* No border */
+  background: #f0f0f0; /* Lighter grey background */
+  border: 2px solid #1a1a1a; /* Black border for definition */
   border-radius: 8px; /* Slightly rounded corners */
   font-size: 16px; /* Readable font size */
   font-weight: 600; /* Semi-bold text for emphasis */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; /* Smooth transitions */
 }
 
 .external-link:hover {
-  background: #e6e6e6; /* Lighter grey on hover */
+  background: #e6e6e6; /* Slightly darker grey on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More shadow on hover */
 }
 
@@ -709,4 +717,12 @@ x
 
 .external-link:hover .link-icon {
   filter: invert(20%); /* Slightly darker icon on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+  .external-link {
+    padding: 16px 24px; /* Add more padding for small screens */
+    font-size: 14px; /* Slightly smaller font for better fit */
+  }
 }
