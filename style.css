@@ -483,7 +483,7 @@ body {
 .about-container {
   display: flex;
   justify-content: space-between; /* Space between images */
-  gap: 20px; /* Gap between the images */
+  gap: 10px; /* Gap between the images */
   margin-bottom: 20px; /* Add space below the images */
 }
 
