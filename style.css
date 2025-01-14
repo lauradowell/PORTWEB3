@@ -668,43 +668,41 @@ x
   }
 }
 
- /* Style the container for links */
- .links-container {
+.links-container {
   display: flex;
   justify-content: center;
   gap: 20px; /* Space between links */
   margin-top: 20px;
 }
 
-/* Style for external links */
 .external-link {
   display: inline-flex;
   align-items: center;
-  text-decoration: none;
-  color: #393939;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 15px;
-  border: 2px solid #393939;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  gap: 8px; /* Space between the icon and text */
+  padding: 10px 20px; /* Inner spacing */
+  text-decoration: none; /* Remove underlines */
+  color: #ffffff; /* Button text color */
+  background-color: #000000; /* Default button background */
+  border: 2px solid #000000; /* Subtle border */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  font-size: 16px; /* Adjust font size */
+  font-weight: 600; /* Semi-bold for a professional appearance */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Hover effect for links */
 .external-link:hover {
-  background-color: #979797;
-  color: #fff;
-  transform: scale(1.05); /* Slight zoom effect */
+  color: #000000; /* Invert text color on hover */
+  background-color: #ffffff; /* Invert background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
 }
 
-/* Style for link icons */
-.link-icon {
-  width: 20px;
+.external-link .link-icon {
+  width: 20px; /* Adjust icon size */
   height: 20px;
-  margin-right: 8px;
+  filter: invert(100%); /* Make icons white for consistency */
 }
 
-/* Adjust icon for emoji */
-.link-icon span {
-  font-size: 20px;
+.external-link:hover .link-icon {
+  filter: invert(0%); /* Change icon color on hover */
 }
