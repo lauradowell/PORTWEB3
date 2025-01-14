@@ -668,29 +668,43 @@ x
   }
 }
 
-
-
-
-
-/* Footer styles */
-footer {
-  background-color: rgb(91, 91, 91); /* Dark gray background */
-  color: white;
-  position: relative; /* Changes to be positioned at the end of the page */
-  width: 100%;
-  padding: 10px;
-  text-align: center; /* Center the text */
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  margin-top: 100px; /* Ensures it stays at the bottom if content is shorter */
-}
-
-body {
-  min-height: 100vh; /* Ensures body is at least the height of the screen */
+ /* Style the container for links */
+ .links-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 20px; /* Space between links */
+  margin-top: 20px;
 }
 
-main {
-  flex: 1; /* Ensures the content section takes up the available space */
+/* Style for external links */
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #393939;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid #393939;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for links */
+.external-link:hover {
+  background-color: #979797;
+  color: #fff;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Style for link icons */
+.link-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Adjust icon for emoji */
+.link-icon span {
+  font-size: 20px;
 }
