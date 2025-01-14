@@ -682,7 +682,7 @@ x
   padding: 12px 24px; /* Adjust padding for a balanced look */
   text-decoration: none; /* Remove underlines */
   color: #ffffff; /* White text color */
-  background: linear-gradient(135deg, #3a3a3a, #373737); /* Gradient from medium grey to dark grey */
+  background: linear-gradient(135deg, #838383, #323232); /* Gradient from medium grey to dark grey */
   border: none; /* Remove border */
   border-radius: 8px; /* Slightly rounded corners */
   font-size: 16px; /* Adjust font size */
