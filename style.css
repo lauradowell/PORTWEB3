@@ -719,10 +719,16 @@ footer {
   width: 100%;
   padding: 10px;
   text-align: center; /* Center the text */
-  font-family: Arial, sans-serif;
   font-size: 13px;
   margin-top: 100px; /* Ensures it stays at the bottom if content is shorter */
   overflow-x: hidden; 
 }
 
 
+/* Mobile adjustment for footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px 5%; /* Add some horizontal padding for better appearance */
+    font-size: 12px; /* Slightly smaller font size on smaller screens */
+  }
+}
