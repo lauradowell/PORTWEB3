@@ -684,26 +684,15 @@ x
 }
 
 .external-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* Space between icon and text */
-  padding: 14px 28px; /* Adjusted padding for better usability */
-  text-decoration: none; /* Remove underlines */
-  color: #1a1a1a; /* Neutral text color */
-  background: #f0f0f0; /* Lighter grey background */
-  border: 2px solid #1a1a1a; /* Black border for definition */
-  border-radius: 8px; /* Slightly rounded corners */
-  font-size: 16px; /* Readable font size */
-  font-weight: 600; /* Semi-bold text for emphasis */
-  font-family: 'Poppins', sans-serif; /* Match font with the rest of the page */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; /* Smooth transitions */
+  color: #1a1a1a;
+  background: transparent;
+  border: 2px solid #1a1a1a;
+}
+.external-link:hover {
+  color: white;
+  background: #1a1a1a;
 }
 
-.external-link:hover {
-  background: #e6e6e6; /* Slightly darker grey on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More shadow on hover */
-}
 
 .external-link:active {
   transform: scale(0.95); /* Slightly shrink button on click */
