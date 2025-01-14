@@ -681,7 +681,7 @@ x
   gap: 8px; /* Space between icon and text */
   padding: 12px 24px; /* Adjust padding for a balanced look */
   text-decoration: none; /* Remove underlines */
-  color: #ffffff; /* White text color */
+  color: #1a1a1a; /* White text color */
   background: linear-gradient(135deg, #c7c7c7, #898888); /* Gradient from medium grey to dark grey */
   border: none; /* Remove border */
   border-radius: 8px; /* Slightly rounded corners */
