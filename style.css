@@ -712,12 +712,15 @@ x
   filter: invert(100%); /* White icon on hover */
 }
 
+/* Media query for smaller screens */
 @media (max-width: 480px) {
   .external-link {
-    padding: 10px 22px; /* Add more padding for small screens */
+    padding: 18px 26px; /* Add more padding for small screens */
     font-size: 14px; /* Slightly smaller font for better fit */
+    margin: 0 10px; /* Add margin to give space on the sides */
   }
 }
+
 
 
 
