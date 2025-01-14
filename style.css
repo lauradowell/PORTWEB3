@@ -678,37 +678,32 @@ x
 .external-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* Space between the icon and text */
-  padding: 10px 20px; /* Inner spacing */
+  gap: 8px; /* Space between icon and text */
+  padding: 12px 24px; /* Adjust padding for a balanced look */
   text-decoration: none; /* Remove underlines */
-  color: #ffffff; /* Button text color */
-  background-color: #000000; /* Default button background */
-  border: 2px solid #000000; /* Subtle border */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  font-size: 16px; /* Adjust font size */
-  font-weight: 600; /* Semi-bold for a professional appearance */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.external-link:hover {
-  color: #000000; /* Invert text color on hover */
-  background-color: #ffffff; /* Invert background on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
-}
-
-.external-link {
+  color: #ffffff; /* White text color */
   background: linear-gradient(135deg, #3a3a3a, #1f1f1f); /* Gradient from medium grey to dark grey */
-  color: #ffffff; /* White text */
-  border: none; /* Remove border for a sleeker look */
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  border: none; /* Remove border */
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 16px; /* Adjust font size */
+  font-weight: 600; /* Semi-bold text for emphasis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth hover transition */
 }
 
 .external-link:hover {
-  background: linear-gradient(135deg, #ffffff, #e6e6e6); /* Gradient from white to light grey */
-  color: #2c2c2c; /* Dark grey text */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffffff, #e6e6e6); /* Light grey gradient on hover */
+  color: #2c2c2c; /* Dark grey text for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow for hover effect */
+  transform: translateY(-2px); /* Lift effect */
 }
 
+.external-link .link-icon {
+  width: 20px; /* Icon size */
+  height: 20px;
+  filter: invert(100%); /* Ensure icons are white */
+}
+
+.external-link:hover .link-icon {
+  filter: invert(0%); /* Make icons dark grey on hover */
+}
