@@ -3,20 +3,67 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CTA</title>
+    <title>STE</title>
     <link rel="stylesheet" href="../style.css"> <!-- Link to external CSS -->
     <script src="../ant.js" defer></script>
     <link rel="icon" href="../ldb.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
 
     <style>
-        /* Make the video responsive */
-        .project-video {
+        /* General styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5; /* Light background for contrast */
+        }
+
+        .project-page {
+            width: 90%;
+            max-width: 800px; /* Match the reference width */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Miro Board Container */
+        .miro-container {
+            width: 100%;
+            padding-top: 56.25%; /* Maintain a 16:9 aspect ratio */
             position: relative;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
+            margin-bottom: 20px; /* Space below the Miro board */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .miro-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Video Section */
+        .project-video {
+            width: 100%;
+            padding-top: 56.25%; /* Maintain a 16:9 aspect ratio */
+            position: relative;
+            margin-top: 20px;
             overflow: hidden;
-            max-width: 100%; /* Ensures it doesn't overflow its container */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .project-video iframe {
@@ -25,39 +72,25 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
 
-      
-        /* Ensure the PDF container is responsive */
-        .pdf-container {
-            width: 100%; /* Take up full width of the parent */
-            height: auto;
-            max-width: 100%; /* Ensure it doesn't overflow */
-            overflow: hidden; /* Hide overflow to avoid scrolling */
-            padding: 10px; /* Optional: Add some padding for better spacing */
-        }
-
-        .pdf-iframe {
-            width: 100%; /* Make iframe take full width */
-            height: 100%; /* Make iframe take full height of the container */
-            border: none; /* Remove iframe border */
-            display: block; /* Ensure it is displayed as a block-level element */
-        }
-
-        /* Mobile view adjustments */
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            /* Adjust the height for mobile screens to prevent the iframe from becoming too tall */
-            .pdf-container {
-                height: 80vh; /* Use 80% of the viewport height */
-                padding: 5px; /* Optional: Reduce padding on mobile */
+            .project-page {
+                width: 95%;
             }
-            
-            .pdf-iframe {
-                height: 100%; /* Ensure it takes full container height */
+
+            .miro-container, .project-video {
+                padding-top: 60%; /* Slightly taller aspect ratio for smaller screens */
             }
         }
 
-
+        @media (max-width: 480px) {
+            .miro-container, .project-video {
+                padding-top: 70%; /* Further adjust for very small screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -67,35 +100,25 @@
 
     <!-- Project Page Content -->
     <section class="project-page">
-        <h1>Community Tech Aid App</h1>
+        <h1>Smart Toy Ethics Video Essay</h1>
+
         <!-- Arrow Container at the top -->
         <div class="arrow-container">
-            <!-- Arrow for Previous Project -->
-            <a href="squeakspeak.html" class="arrow left-arrow" style="font-size: 20px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 8px; border-radius: 10px; transition: all 0.3s ease; text-decoration: none;">←</a>
-
-            <!-- Arrow for Next Project -->
-            <a href="circ.html" class="arrow right-arrow" style="font-size: 20px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 8px; border-radius: 10px; transition: all 0.3s ease; text-decoration: none;">→</a>
+            <a href="circ.html" class="arrow left-arrow" style="font-size: 20px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 8px; border-radius: 10px; transition: all 0.3s ease; text-decoration: none;">←</a>
         </div>
 
-          <!-- Video Section -->
-        <div class="project-video" style="margin-top: 30px;">
-            <iframe src="https://www.youtube.com/embed/ssk_4byr8nw?si=bVUvxfTZUKdqT5qV"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- Miro Board Embedding -->
+        <div class="miro-container">
+            <iframe src="https://miro.com/app/live-embed/uXjVN-zlAzk=/?moveToViewport=1024,-2403,1658,915&embedId=907097867146" allowfullscreen></iframe>
         </div>
 
-        <div class="project-description">
-            <p><i>2023 - SwiftUI </i></p>
-            <p>The Community Tech Aid App was developed to provide accessible information and support for beneficiaries receiving computers from the charity. Its goal is to help users get started with their new devices, offering guidance, helpful links, and resources that assist in building computer literacy. The app is designed with the understanding that many users are more familiar with mobile devices, making it easier for them to transfer their skills to their newly acquired laptops. By offering a user-friendly platform, the app aims to empower individuals to take their first steps towards digital inclusion and improve their tech skills.</p>
+        <!-- Video Section -->
+        <div class="project-video">
+            <iframe src="https://www.youtube.com/embed/U-3Wv7rukF8?si=uTANMhkb3UJL6vnJ" title="YouTube video player" allowfullscreen></iframe>
         </div>
-
-        <!-- Image Section -->
-        <div class="project-image">
-            <img src="../project4.jpg" alt="cta screens">
-        </div>
-
-
     </section>
+    <footer class="footer">
+        <p style="text-align: center; padding: 10px; font-size: 0.9rem;">&copy; 2025 Laura Dowell Ballesta. Content licensed under Creative Commons CC BY-NC-SA 4.0. Crafted with care.</p>
+    </footer>
 </body>
-<footer class="footer">
-    <p>&copy; 2025 Laura Dowell Ballesta. Content licensed under Creative Commons CC BY-NC-SA 4.0. Crafted with care.</p>
-</footer>
 </html>
