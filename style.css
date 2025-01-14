@@ -483,7 +483,7 @@ body {
 .about-container {
   display: flex;
   justify-content: space-between; /* Space between images */
-  gap: 10px; /* Gap between the images */
+  gap: 15px; /* Gap between the images */
   margin-bottom: 20px; /* Add space below the images */
 }
 
@@ -511,7 +511,7 @@ body {
 @media (max-width: 768px) {
   .about-container {
       flex-direction: column; /* Stack items vertically on mobile */
-      gap: 25px;
+      gap: 15px;
   }
 
   .about-item {
@@ -562,7 +562,7 @@ body {
 @media (max-width: 480px) {
   .about-container {
       flex-direction: column; /* Stack items vertically on mobile */
-      gap: 25px;
+      gap: 15px;
   }
 x
   .about-item {
@@ -607,7 +607,7 @@ x
   }
   .about-container {
       flex-direction: column; /* Stack items vertically on mobile */
-      gap: 25px;
+      gap: 15px;
   }
 
   .about-item {
@@ -623,7 +623,7 @@ x
 @media (min-width: 1024px) {
     .about-container {
       flex-direction: column; /* Stack items vertically on mobile */
-      gap: 25px;
+      gap: 15px;
   }
 
   .about-item {
