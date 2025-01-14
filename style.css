@@ -35,7 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Ensures vertical alignment of items */
-  padding: 20px 38px; /* Adds space to the right */
+  padding: 15px 40px; /* Adds space to the right */
   background-color: white; /* White navbar */
   position: sticky; /* Makes the navbar sticky */
   top: 0; /* Sticks the navbar to the top */
