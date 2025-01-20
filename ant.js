@@ -14,8 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>
                     <a class="hover-underline-animation" href="${basePath}index.html">PORTFOLIO</a>
                 </li>
-                <li>
-                    <a class="hover-underline-animation" href="${basePath}pages/about.html">ABOUT</a>
+                <li class="dropdown">
+                <a class="hover-underline-animation dropbtn" href="javascript:void(0)">ABOUT</a>
+                    <!-- Dropdown for About -->
+                    <div class="dropdown-content">
+                        <a href="${basePath}pages/about.html">About me</a>
+                        <a href="${basePath}pages/skills.html">Skills</a>
+                        <a href="${basePath}pages/currents.html">Blog</a>
+                    </div>
                 </li>
              
             </ul>
