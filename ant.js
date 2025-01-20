@@ -9,14 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <ul class="nav-links">
                 <li>
+                    <a class="hover-underline-animation" href="${basePath}pages/currents.html">BLOG</a>
+                </li>
+                <li>
                     <a class="hover-underline-animation" href="${basePath}index.html">PORTFOLIO</a>
                 </li>
                 <li>
                     <a class="hover-underline-animation" href="${basePath}pages/about.html">ABOUT</a>
                 </li>
-                <li>
-                    <a class="hover-underline-animation" href="${basePath}pages/currents.html">BLOG</a>
-                </li>
+             
             </ul>
         </div>
     `;
