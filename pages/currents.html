@@ -149,11 +149,39 @@
         }
         /* Ensure the PDF container is responsive */
         .pdf-container {
-            width: 50%; /* Take up full width of the parent */
-            height: auto;
-            max-width: 100%; /* Ensure it doesn't overflow */
-            overflow: hidden; /* Hide overflow to avoid scrolling */
-            padding: 10px; /* Optional: Add some padding for better spacing */
+            width: 100%; /* Ensure it takes up full width on all devices */
+            max-width: 600px; /* Set a maximum width for larger screens */
+            margin: 0 auto; /* Center it within the parent container */
+            overflow: hidden; /* Hide any overflowing content */
+            padding: 10px; /* Add some spacing */
+        }
+
+        .pdf-iframe {
+            width: 100%; /* Allow iframe to span the full width of the container */
+            height: 600px; /* Set an appropriate height */
+            border: none; /* Remove border around iframe */
+        }
+
+        /* Adjustments for small screens */
+        @media (max-width: 768px) {
+            .pdf-container {
+                max-width: 100%; /* Use the entire screen width for small screens */
+                padding: 0; /* Remove extra padding */
+            }
+
+            .pdf-iframe {
+                height: 400px; /* Reduce height for better mobile visibility */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pdf-container {
+                padding: 0 10px; /* Add minimal padding for mobile devices */
+            }
+
+            .pdf-iframe {
+                height: 300px; /* Further reduce height for very small screens */
+            }
         }
 
     
