@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="dropdown-content">
                         <a href="${basePath}pages/about.html">About me</a>
                         <a href="${basePath}pages/skills.html">Skills</a>
-                        <a href="${basePath}pages/currents.html">Blog</a>
                     </div>
                 </li>
              
