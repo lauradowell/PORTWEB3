@@ -711,8 +711,9 @@ x
 }
 
 footer {
-  background-color: rgb(122, 122, 122); /* Dark gray background */
-  color: white;
+  background: #333;
+  color: #fff;
+  text-align: center;
   position: relative; /* Keeps footer at the bottom of the page */
   width: 100%;
   padding: 10px;
