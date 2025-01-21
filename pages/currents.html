@@ -9,179 +9,78 @@
     <script src="../ant.js" defer></script> <!-- Link to the JS file where printHTMLprimarynav is defined -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
     <style>
-        /* Flexbox container settings to make items align horizontally */
-        .about-container {
-            display: flex;
-            justify-content: space-between; /* Ensure items are spaced out */
-            align-items: center;
-            gap: 20px;
-            flex-wrap: nowrap; /* Prevent wrapping of items */
+       /* Enhanced styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
 
-        /* Image styles */
-        .about-item img, 
-        .about-item iframe {
-            width: 100%;  /* Ensure images fill container */
-            height: auto; /* Maintain aspect ratio */
-            max-width: 100%; /* Ensure it doesn't stretch beyond its container */
-            border: none; /* Remove iframe border */
-        }
-
-        .about-item {
-            flex: 1 1 45%; /* Make items take up about 45% of the available space */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 500px; /* Optional: Limit the maximum width for larger screens */
-        }
-
-        .about-box {
-            max-width: 1200px;
-            margin: 0 auto;
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .project {
+            background: #fff;
+            border: 1px solid #ddd;
             padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            /* For smaller screens, make images stack vertically */
-            .about-container {
-                flex-direction: column; /* Stack images vertically */
-            }
-
-            .about-item img, 
-            .about-item iframe {
-                width: 100%; /* Ensure images fill the width */
-                height: auto; /* Maintain aspect ratio */
-            }
-        }
-        @media (min-width: 1024px) {
-            /* For smaller screens, make images stack vertically */
-            .about-container {
-                flex-direction: row; /* Stack images vertically */
-            }
-
-            .about-item img, 
-            .about-item iframe {
-                width: 100%; /* Ensure images fill the width */
-                height: auto; /* Maintain aspect ratio */
-            }
-            
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-        @media (max-width: 480px) {
-            /* On extra small screens (like phones), adjust further */
-            .about-item img, 
-            .about-item iframe {
-                max-width: 100%; /* Ensure GIF doesn't overflow */
-                height: auto; /* Allow height to scale */
-            }
-        }
-
-        /* General Button Styling */
-        .links-container {
-        display: flex;
-        flex-wrap: wrap; /* Allow wrapping for smaller screens */
-        justify-content: center;
-        gap: 15px; /* Reduced space between buttons */
-        margin-top: 30px;
+        .project img {
+            border-radius: 10px;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 15px;
         }
 
         .external-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px; /* Space between icon and text */
-        padding: 12px 28px; /* Adjusted padding for better usability */
-        text-decoration: none; /* Remove underlines */
-        color: #000; /* Black text color */
-        background: #fff; /* White background */
-        border: 2px solid #000; /* Black border for definition */
-        border-radius: 25px; /* Rounded edges */
-        font-size: 16px; /* Readable font size */
-        font-weight: 600; /* Semi-bold text for emphasis */
-        font-family: 'Poppins', sans-serif; /* Match font with the rest of the page */
-        transition: all 0.3s ease; /* Smooth transitions */
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: #0073e6;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s ease;
         }
 
-        /* Hover effect */
         .external-link:hover {
-        background: #000; /* Black background on hover */
-        color: #fff; /* White text on hover */
-        border: 2px solid #fff; /* White border on hover */
+            background: #005bb5;
         }
 
-        .external-link:active {
-        transform: scale(0.98); /* Slightly shrink button on click */
-        }
-
-        .external-link .link-icon {
-        width: 18px; /* Icon size */
-        height: 18px;
-        filter: invert(0%); /* Neutral icon color */
-        transition: filter 0.3s ease; /* Smooth transition for icon color */
-        }
-
-        /* Icon color on hover */
-        .external-link:hover .link-icon {
-        filter: invert(100%); /* White icon on hover */
-        }
-
-        /* For smaller screens */
-        @media (max-width: 480px) {
-        .links-container {
-            padding: 0 15px; /* Adjust padding to be a bit smaller for left/right space */
-        }
-
-        .external-link {
-            padding: 10px 20px; /* Smaller padding for buttons */
-            font-size: 14px; /* Smaller font size */
-            width: 45%; /* Make the buttons take 45% of the width for two in a row */
-        }
-        }
-
-        /* For slightly larger screens (max-width: 768px) */
-        @media (max-width: 768px) {
-        .external-link {
-            padding: 12px 24px; /* Adjust padding for tablets */
-            font-size: 15px; /* Adjust font size */
-            width: 45%; /* 2 buttons per row on medium screens */
-        }
-        }
-        /* Ensure the PDF container is responsive */
-        .pdf-container {
-            width: 100%; /* Ensure it takes up full width on all devices */
-            max-width: 600px; /* Set a maximum width for larger screens */
-            margin: 0 auto; /* Center it within the parent container */
-            overflow: hidden; /* Hide any overflowing content */
-            padding: 10px; /* Add some spacing */
-        }
-
-        .pdf-iframe {
-            width: 100%; /* Allow iframe to span the full width of the container */
-            height: 800px; /* Set an appropriate height */
-            border: none; /* Remove border around iframe */
-        }
-
-        /* Adjustments for small screens */
-        @media (max-width: 768px) {
-            .pdf-container {
-                max-width: 100%; /* Use the entire screen width for small screens */
-                padding: 0; /* Remove extra padding */
-            }
-
-            .pdf-iframe {
-                height: 400px; /* Reduce height for better mobile visibility */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .pdf-container {
-                padding: 0 10px; /* Add minimal padding for mobile devices */
-            }
-
-            .pdf-iframe {
-                height: 300px; /* Further reduce height for very small screens */
-            }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 14px;
         }
 
     
@@ -261,19 +160,18 @@
                 </p>
 
             </div>
-             <!-- Project 3: pasarlea -->
-             <div class="project" style="border: 1px solid #ccc; padding: 16px; margin: 16px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <div class="project" style="border: 1px solid #ccc; padding: 16px; margin: 16px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
                 <h2 style="text-align: center;"> Jerez Flamenco Fashion Week </h2>
-                <div class="result-images" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                    <img src="../curr/ps1.jpg" alt="paseral flamenca 1" style="width: 48%; object-fit: cover;">
-                    <img src="../curr/ps2.jpg" alt="Detailed view of the handcrafted jewelry" style="width: 48%; object-fit: cover;">
-                    <img src="../curr/ps3.jpg" alt="Final product of the jewelry design" style="width: 48%; object-fit: cover;">
+                <div class="result-images" style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: nowrap;">
+                    <img src="../curr/ps1.jpg" alt="paseral flamenca 1" style="width: 32%; object-fit: cover;">
+                    <img src="../curr/ps2.jpg" alt="Detailed view of the handcrafted jewelry" style="width: 32%; object-fit: cover;">
+                    <img src="../curr/ps3.jpg" alt="Final product of the jewelry design" style="width: 32%; object-fit: cover;">
                 </div>
                 <p style="text-align: justify; line-height: 1.6;">
-                   I recently went to the fitting for the Flamenco Catwalk in Jerez, a yearly event that sets the tone for the dresses and styles thatw ill be worn in the Feria. Alongside Seville, Jerez is the center for flamenco, and its been truly an honor to be a part of this process as a model. I was fitted for various dresses, one of which I'm partifularly excited about but won't tell you about until the day comes. It was fun to see the seamstresses and designers iterate on their projects, and decide in real time. It's truly an honor to be able to connect with my culture and the fabulous people behind its fashions, and I will be walking 13 shows. Between you and me I was a bit nervous as I was bloated, and these dresses are made to the last cm, but it was so fun to also connect with other models and see the behind the sceens, I can't wait!
+                    I recently went to the fitting for the Flamenco Catwalk in Jerez, a yearly event that sets the tone for the dresses and styles that will be worn in the Feria. Alongside Seville, Jerez is the center for flamenco, and it's been truly an honor to be a part of this process as a model. I was fitted for various dresses, one of which I'm particularly excited about but won't tell you about until the day comes. It was fun to see the seamstresses and designers iterate on their projects and decide in real-time. It's truly an honor to be able to connect with my culture and the fabulous people behind its fashions, and I will be walking 13 shows. Between you and me, I was a bit nervous as I was bloated, and these dresses are made to the last cm, but it was so fun to also connect with other models and see behind the scenes. I can't wait!
                 </p>
-
             </div>
+            
 
         </div>
 
