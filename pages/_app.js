@@ -4,7 +4,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
-      <Analytics /> {/* Enables Vercel Analytics */}
+      <Analytics /> {/*wes */}
     </>
   );
 }
