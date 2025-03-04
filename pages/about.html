@@ -27,14 +27,21 @@
             border: none; /* Remove iframe border */
         }
 
+        /* Centering the PICSART image */
         .about-item {
-            flex: 1 1 45%; /* Make items take up about 45% of the available space */
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centers the image */
             align-items: center;
-            max-width: 500px; /* Optional: Limit the maximum width for larger screens */
+            width: 100%; /* Ensures it takes full width */
         }
 
+        .about-item img {
+            max-width: 500px; /* Adjust this if needed */
+            width: 100%; /* Ensures responsiveness */
+            height: auto;
+        }
+
+        /* General about-box styling */
         .about-box {
             max-width: 1200px;
             margin: 0 auto;
@@ -55,99 +62,99 @@
                 height: auto; /* Maintain aspect ratio */
             }
         }
+
         @media (min-width: 1024px) {
-            /* For smaller screens, make images stack vertically */
+            /* Ensure images stay aligned in large screens */
             .about-container {
-                flex-direction: row; /* Stack images vertically */
+                flex-direction: row;
             }
 
             .about-item img, 
             .about-item iframe {
-                width: 100%; /* Ensure images fill the width */
-                height: auto; /* Maintain aspect ratio */
+                width: 100%;
+                height: auto;
             }
-            
         }
 
         @media (max-width: 480px) {
             /* On extra small screens (like phones), adjust further */
             .about-item img, 
             .about-item iframe {
-                max-width: 100%; /* Ensure GIF doesn't overflow */
-                height: auto; /* Allow height to scale */
+                max-width: 100%;
+                height: auto;
             }
         }
 
         /* General Button Styling */
         .links-container {
-        display: flex;
-        flex-wrap: wrap; /* Allow wrapping for smaller screens */
-        justify-content: center;
-        gap: 15px; /* Reduced space between buttons */
-        margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            justify-content: center;
+            gap: 15px; /* Reduced space between buttons */
+            margin-top: 30px;
         }
 
         .external-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px; /* Space between icon and text */
-        padding: 12px 28px; /* Adjusted padding for better usability */
-        text-decoration: none; /* Remove underlines */
-        color: #000; /* Black text color */
-        background: #fff; /* White background */
-        border: 2px solid #000; /* Black border for definition */
-        border-radius: 25px; /* Rounded edges */
-        font-size: 16px; /* Readable font size */
-        font-weight: 600; /* Semi-bold text for emphasis */
-        font-family: 'Poppins', sans-serif; /* Match font with the rest of the page */
-        transition: all 0.3s ease; /* Smooth transitions */
+            display: inline-flex;
+            align-items: center;
+            gap: 12px; /* Space between icon and text */
+            padding: 12px 28px; /* Adjusted padding for better usability */
+            text-decoration: none;
+            color: #000;
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
         }
 
         /* Hover effect */
         .external-link:hover {
-        background: #000; /* Black background on hover */
-        color: #fff; /* White text on hover */
-        border: 2px solid #fff; /* White border on hover */
+            background: #000;
+            color: #fff;
+            border: 2px solid #fff;
         }
 
         .external-link:active {
-        transform: scale(0.98); /* Slightly shrink button on click */
+            transform: scale(0.98); /* Slightly shrink button on click */
         }
 
         .external-link .link-icon {
-        width: 18px; /* Icon size */
-        height: 18px;
-        filter: invert(0%); /* Neutral icon color */
-        transition: filter 0.3s ease; /* Smooth transition for icon color */
+            width: 18px;
+            height: 18px;
+            filter: invert(0%);
+            transition: filter 0.3s ease;
         }
 
         /* Icon color on hover */
         .external-link:hover .link-icon {
-        filter: invert(100%); /* White icon on hover */
+            filter: invert(100%);
         }
 
         /* For smaller screens */
         @media (max-width: 480px) {
-        .links-container {
-            padding: 0 15px; /* Adjust padding to be a bit smaller for left/right space */
-        }
+            .links-container {
+                padding: 0 15px;
+            }
 
-        .external-link {
-            padding: 10px 20px; /* Smaller padding for buttons */
-            font-size: 14px; /* Smaller font size */
-            width: 45%; /* Make the buttons take 45% of the width for two in a row */
-        }
+            .external-link {
+                padding: 10px 20px;
+                font-size: 14px;
+                width: 45%;
+            }
         }
 
         /* For slightly larger screens (max-width: 768px) */
         @media (max-width: 768px) {
-        .external-link {
-            padding: 12px 24px; /* Adjust padding for tablets */
-            font-size: 15px; /* Adjust font size */
-            width: 45%; /* 2 buttons per row on medium screens */
+            .external-link {
+                padding: 12px 24px;
+                font-size: 15px;
+                width: 45%;
+            }
         }
-        }
-        
+
     </style>
 </head>
 <body>
