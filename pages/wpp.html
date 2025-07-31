@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Information Arquitecture</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Link to external CSS -->
+    <script src="../ant.js" defer></script>
+    <link rel="icon" href="../ldb.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        /* Make the video responsive */
+        .project-video {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%; /* Ensures it doesn't overflow its container */
+        }
+
+        .project-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+      
+        /* Ensure the PDF container is responsive */
+        .pdf-container {
+            width: 70%; /* Take up full width of the parent */
+            height: auto;
+            max-width: 100%; /* Ensure it doesn't overflow */
+            overflow: hidden; /* Hide overflow to avoid scrolling */
+            padding: 10px; /* Optional: Add some padding for better spacing */
+        }
+
+        .pdf-iframe {
+            width: 70%; /* Make iframe take full width */
+            height: 100%; /* Make iframe take full height of the container */
+            border: none; /* Remove iframe border */
+            display: block; /* Ensure it is displayed as a block-level element */
+        }
+
+            /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            .pdf-container {
+                width: 100%; /* Use the full width of the viewport */
+                height: 80vh; /* Use 80% of the viewport height */
+                padding: 0; /* Remove extra padding for more space */
+            }
+            
+            .pdf-iframe {
+                width: 100%; /* Ensure it stretches to the container's full width */
+                height: 100%; /* Fill the container's height */
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="primarynav"></nav> <!-- Navbar will be dynamically injected here -->
+    </header>
+
+    <!-- Project Page Content -->
+    <section class="project-page">
+        <h1>World Press Photo Mock up</h1>
+
+        <!-- Arrow Container at the top -->
+        <div class="arrow-container">
+            <!-- Arrow for Next Project -->
+            <a href="ethics.html" class="arrow left-arrow" style="font-size: 20px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 8px; border-radius: 10px; transition: all 0.3s ease; text-decoration: none;">→</a>
+        </div>
+
+        <div class="project-description">
+
+            <p><i>2025 - Figma.</i></p>
+
+            <p> As part of an information architecture and mockup exercise, I developed a prototype for the World Press Photo mobile application with the goal of creating an intuitive, accessible, and efficient user experience. The design focuses on simplifying navigation and organizing content effectively, based on a flowchart developed in earlier stages of the project. This structure was informed by prior user research, including a card sorting activity conducted with relevant users to ensure alignment with their mental models. The result is a system that applies core principles of information architecture, enabling users to quickly access key sections such as their profile, visual exploration tools, and educational resources. I prioritized ease of use by incorporating familiar interface elements like a hamburger menu, bottom navigation bar, and shortcut access to frequently used features. Additionally, the prototype addresses the diverse needs of identified user personas by including functionality tailored to their interests, such as educational content, visual exploration, and account customization. Overall, this prototype represents a user-centered solution that supports clear information organization and fluid navigation, grounded in both research and design best practices.
+            </p>
+            
+            <div class="pdf-container">
+                <iframe id="pdfIframe" src="https://drive.google.com/file/d/1MbmoKhqvfSCZetboFBd_zvfPBdrvJgoq" class="pdf-iframe" allow="autoplay"></iframe>
+            </div>
+        
+        </div>
+            
+
+    </section>
+</body>
+<footer class="footer">
+    <p>&copy; 2025 Laura Dowell Ballesta. Content licensed under Creative Commons CC BY-NC-SA 4.0. Crafted with care.</p>
+</footer>
+</html>
