@@ -56,7 +56,17 @@
                 height: 100%; /* Fill the container's height */
             }
         }
-
+        .figma-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 ratio for responsiveness */
+        }
+        .figma-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
 
 
     </style>
@@ -81,6 +91,15 @@
         <div class="project-description">
 
             <p><i>2025 - Figma.</i></p>
+            <div class="figma-wrap">
+                <iframe
+                  style="border: none;"
+                  width="100%"
+                  height="600"
+                  allowfullscreen
+                  src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/OC33JnZ9xIdgESQaQnAyAU/FLUJO-1-A.I.?node-id=1-2&p=f&t=9VMNGE3GHrruora7-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2">
+                </iframe>
+            </div>
 
             <p> As part of an information architecture and mockup exercise, I developed a prototype for the World Press Photo mobile application with the goal of creating an intuitive, accessible, and efficient user experience. The design focuses on simplifying navigation and organizing content effectively, based on a flowchart developed in earlier stages of the project. This structure was informed by prior user research, including a card sorting activity conducted with relevant users to ensure alignment with their mental models. The result is a system that applies core principles of information architecture, enabling users to quickly access key sections such as their profile, visual exploration tools, and educational resources. I prioritized ease of use by incorporating familiar interface elements like a hamburger menu, bottom navigation bar, and shortcut access to frequently used features. Additionally, the prototype addresses the diverse needs of identified user personas by including functionality tailored to their interests, such as educational content, visual exploration, and account customization. Overall, this prototype represents a user-centered solution that supports clear information organization and fluid navigation, grounded in both research and design best practices.
             </p>
